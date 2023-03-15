@@ -1,0 +1,61 @@
+.profile {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.profile__title {
+    margin: 74px auto 0;
+    font-family: "Inter";
+    font-weight: 400;
+    font-style:normal;
+    font-size: 24px;
+    line-height: auto;
+}
+
+.profile__form {
+    display: flex;
+    flex-direction: column;
+    margin: 106px auto 0;
+    width: 410px;
+}
+
+.profile__text {
+   margin: 17px 0 0;
+   border: none;
+   border-bottom: #E8E8E8 1px solid;
+   padding-bottom: 17px;
+}
+
+.profile__text:last-of-type {
+    border-bottom: none;
+    margin-bottom: 212px;
+}
+
+input::-webkit-input-placeholder {
+    color: black;
+}
+
+input::-moz-placeholder {
+    color: black;
+}
+
+.profile__btn {
+    margin: 8px auto;
+    padding: 0;
+    width: 410px;
+    height: 16px;
+    font-family: "Inter";
+    font-weight: 400;
+    font-style:normal;
+    font-size: 13px;
+    line-height: auto;
+    border: none;
+    background-color: inherit;
+}
+
+.profile__btn:last-child {
+    margin-bottom: 70px;
+    color: #EE3465;
+}

@@ -1,0 +1,39 @@
+.portfolio {
+   margin: 0 auto;
+   max-width: 1140px;
+}
+
+.portfolio-name {
+    margin-top: 100px;
+    font-family: "Inter";
+    font-weight: 400;
+    font-style:normal;
+    font-size: 18px;
+    line-height: 20px;
+    color: #A0A0A0;
+    text-align: start;
+}
+
+.portfolio-item {
+    display: flex;
+    font-family: "Inter";
+    font-weight: 400;
+    font-style:normal;
+    font-size: 30px;
+    line-height: 50px;
+    margin-top: 30px;
+    margin-left: 0;
+    padding-bottom: 18px;
+    text-align: left;
+    border-bottom: 1px #E8E8E8 solid;
+}
+
+.portfolio-item:last-child {
+    border-bottom: none;
+    margin-bottom: 120px;
+}
+
+.portfolio-span {
+    display: flex;
+    margin-right: 0;
+}

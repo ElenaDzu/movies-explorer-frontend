@@ -1,0 +1,29 @@
+.searchform {
+ display: flex;
+ flex-direction: row;
+ margin: 0 auto;
+ max-width: 1140px;
+ width: 932px;
+ justify-content: flex-start;
+}
+
+.searchform__form {
+    max-width: 1140px;
+    margin-bottom: 10px;
+    margin-top: 80px;
+    padding-bottom: 83px;
+    border-bottom: #AAAAAA 1px solid;
+}
+
+.searchform__input {
+    border: none;
+    border-radius: 30px;
+    border: #AAAAAA solid 1px;
+}
+
+.searchform__image {
+    width: 34px;
+    height: 34px;
+    border: none;
+    padding: 7px;
+}

@@ -1,0 +1,74 @@
+.aboutme {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    max-width: 1140px;
+    max-height: 625px;
+}
+
+.aboutme-subtitle {
+    padding-bottom: 25px;
+    margin-top: 26px;
+    display: flex;
+    max-width: 1140px;
+    text-align: left;
+    border-bottom: none;
+    font-family: "Inter";
+    font-weight: 400;
+    font-style:normal;
+    font-size: 22px;
+    line-height: auto;
+}
+.aboutme-subtitle:nth-last-child(2) {
+    margin-top: 17px;
+    font-size: 18px;
+    line-height: 20px;
+    border-bottom: 1px black solid;
+}
+.aboutme-card {
+    margin-top: 45px;
+    display: flex;
+    flex-direction: row;
+}
+
+.aboutme-text {
+    display: flex;
+    text-align: start;
+    margin-left: 0;
+    max-width: 600px;
+}
+.aboutme-title {
+    font-family: "Inter";
+    font-weight: 400;
+    font-style:normal;
+    font-size: 50px;
+    line-height: 58px;
+}
+
+.aboutme-description {
+    font-family: "Inter";
+    font-weight: 400;
+    font-style:normal;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.aboutme-image {
+    margin-right: 0;
+    background-repeat: no-repeat;
+    width: 23%;
+    height: 327px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.aboutme-place {
+    margin-top: 85px;
+    font-family: "Inter";
+    font-weight: 400;
+    font-style:normal;
+    font-size: 14px;
+    line-height: auto;
+    text-align: start;
+}

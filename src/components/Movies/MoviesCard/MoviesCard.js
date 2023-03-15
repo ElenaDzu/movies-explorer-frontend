@@ -1,6 +1,7 @@
 import { React } from "react";
 
 function MoviesCard(card) {
+    
     return (
         <div className="moviescard">
             <img className="moviescard__image" src={card.src} alt="Постер к фильму" ></img>

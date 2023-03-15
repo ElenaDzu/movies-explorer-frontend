@@ -1,6 +1,6 @@
 import { React } from "react";
 import MoviesCard from "../MoviesCard/MoviesCard";
-//import { Route, Switch } from "react-router-dom";
+
 import card1 from "../../../images/cardtest.svg";
 import card2 from "../../../images/100des.svg";
 import card7 from "../../../images/benksy.svg";

@@ -1,11 +1,11 @@
+import { useState } from 'react';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import './App.css';
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer"
 import Register from '../Register/Register';
 import Login from '../Login/Login';
-import Landing from '../Main/Main';
-import { useState } from 'react';
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import Main from '../Main/Main';
 import Movies from '../Movies/Movies';
 import SavedMovies from '../SavedMovies/SavedMovies';
 import Profile from '../Profile/Profile';
@@ -17,7 +17,6 @@ function App() {
 
   function handleUserLogin(userData) {
     setUserInfo(userData);
-    //console.log(e)
   };
 
   return (
@@ -25,7 +24,7 @@ function App() {
       <Header userInfo={userInfo}></Header>
       <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Landing/>}/>
+        <Route path="/" element={<Main/>}/>
         <Route path="/sign-in" element={<Login handleLogin={ handleUserLogin }/>}/>
         <Route path="/sign-up" element={<Register/>}/>
         <Route path="/movies" element={<Movies/>}/>

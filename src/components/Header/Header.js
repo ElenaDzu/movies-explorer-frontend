@@ -5,9 +5,8 @@ function Header({ userInfo }) {
 
   return (
     <header className="header">
-      <a href="/">
+      <a className="header header__logo" href="/">
         <img
-          className="header header__logo"
           src={logoPath}
           alt="Логотип проекта"
         />
@@ -18,8 +17,15 @@ function Header({ userInfo }) {
           <a className="header__link" href="/sign-in">Войти</a>
         </nav>
       ) : (
-        <nav>
-          <a className="header__link" src={ProfilePath} href="/profile">Аккаунт</a>
+        <nav className="header header__links">
+          <a className="header__link-in" href="/movies">Фильмы</a>
+          <a className="header__link-in" href="/saved-movies">Сохраненные фильмы</a>
+          <a className="header__profile" href="/profile">
+            <img
+              src={ProfilePath}
+              alt="Логотип профайла"
+            />
+          </a>
         </nav>
       )}
     </header>

@@ -6,7 +6,7 @@
 .portfolio-name {
     margin-top: 100px;
     font-family: "Inter";
-    font-weight: 400;
+    font-weight:400;
     font-style:normal;
     font-size: 18px;
     line-height: 20px;
@@ -21,11 +21,16 @@
     font-style:normal;
     font-size: 30px;
     line-height: 50px;
-    margin-top: 30px;
+    padding-top: 20px;
     margin-left: 0;
-    padding-bottom: 18px;
+    padding-bottom: 19px;
     text-align: left;
     border-bottom: 1px #E8E8E8 solid;
+    letter-spacing: -1px;
+}
+
+.portfolio-item:first-of-type {
+    margin-top: 30px;
 }
 
 .portfolio-item:last-child {

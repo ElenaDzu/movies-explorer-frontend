@@ -3,17 +3,18 @@
     margin: 0 auto;
     width: 100%;
     max-width: 1200px;
-    height: 412px;
     background-color: #F5F5F5;
-    font-family: "Inter";
-    font-weight: 400;
-    font-style:normal;
-    font-size: 50px;
-    line-height: 58px;
     align-items: center;
 }
 
 .promo-text {
     max-width: 730px;
- 
+    margin-top: 160px;
+    margin-bottom: 151px;
+    font-family: "Inter";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    line-height: 58px;
+    letter-spacing: -2px;
 }

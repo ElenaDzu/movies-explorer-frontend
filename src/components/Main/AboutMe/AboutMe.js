@@ -5,16 +5,16 @@ import Image from "../../../images/student.svg"
 function AboutMe() {
     return (
         <div className="aboutme">
-           <h3 className="aboutme aboutme-subtitle">Студент</h3>
-           <div className="aboutme aboutme-card">
-                <div className="aboutme aboutme-text">
-                    <h1 className="aboutme aboutme-title">Виталий</h1>
-                    <h3 className="aboutme aboutme-subtitle">Фронтенд-разработчик, 30 лет</h3>
-                    <p className="aboutme aboutme-description">Я родился и живу в Саратове, закончил факультет экономики СГУ. У меня есть жена 
+           <h3 className="aboutme aboutme__subtitle">Студент</h3>
+           <div className="aboutme aboutme__card">
+                <div className="aboutme__text">
+                    <h1 className="aboutme__title">Виталий</h1>
+                    <h3 className="aboutme__prof">Фронтенд-разработчик, 30 лет</h3>
+                    <p className="aboutme__description">Я родился и живу в Саратове, закончил факультет экономики СГУ. У меня есть жена 
 и дочь. Я люблю слушать музыку, а ещё увлекаюсь бегом. Недавно начал кодить. С 2015 года работал в компании «СКБ Контур». После того, как прошёл курс по веб-разработке, начал заниматься фриланс-заказами и ушёл с постоянной работы.</p>
-                    <p className="aboutme aboutme-place">Github</p>
+                <a href="#" className="aboutme__place">Github</a>
                 </div>
-                <img className="aboutme aboutme-image" src={Image} alt="фото студента"></img>
+                <img className="aboutme__image" src={Image} alt="фото студента"></img>
             </div>
         </div>
     );

@@ -9,11 +9,10 @@
   
   .header__logo {
     padding: 0;
-    margin: 18px auto 18px 0;
+    margin: 18px auto 38px 0;
     display: flex;
     flex-direction: row;
     width: 38px;
-    max-width: 100%;
   }
 
   .header__links {
@@ -24,8 +23,7 @@
     display: flex;
     justify-content: flex-end;
     padding: 8px 20px;
-    margin-top: 33px;
-    margin: 33px 29px 33px 0;
+    margin: 21px 29px 41px 0;
     text-decoration: none;
     color: inherit;
     font-family: "Inter";
@@ -37,6 +35,8 @@
 
   .header__link:first-child {
     margin-left: 80%;
+    padding-left: 40px;
+    padding-right: 0;
   }
 
  .header__link:nth-child(2) {

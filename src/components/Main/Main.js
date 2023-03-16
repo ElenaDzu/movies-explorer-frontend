@@ -11,8 +11,8 @@ function Main() {
     return (
         <div className="main">
             <Promo></Promo>
-            <AboutProject></AboutProject>
             <NavTab></NavTab>
+            <AboutProject></AboutProject>
             <Techs></Techs>
             <AboutMe></AboutMe>
             <Portfolio></Portfolio>

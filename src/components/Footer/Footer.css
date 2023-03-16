@@ -3,13 +3,18 @@
     width: 100%;
     max-width: 1280px;
     background-color: #FAFAFA ;
+    font-family: "Inter";
+    font-weight: 400;
+    font-style:normal;
+    font-size: 13px;
+    line-height: auto;
 }
 
 .footer__project {
     margin: 0 auto;
     max-width: 1140px;
     border-bottom: 1px solid #E8E8E8;
-    padding-top: 70px;
+    padding-top: 67px;
     padding-bottom: 20px;
     color: #A0A0A0;
 }
@@ -20,11 +25,6 @@
     margin: 0 auto;
     padding: 19px 0;
     align-items: center;
-    font-family: "Inter";
-    font-weight: 400;
-    font-style:normal;
-    font-size: 13px;
-    line-height: auto;
 }
 
 .footer__date {

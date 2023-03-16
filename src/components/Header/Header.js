@@ -5,8 +5,9 @@ function Header({ userInfo }) {
 
   return (
     <header className="header">
-      <a className="header header__logo" href="/">
+      <a href="/">
         <img
+          className="header__logo"
           src={logoPath}
           alt="Логотип проекта"
         />

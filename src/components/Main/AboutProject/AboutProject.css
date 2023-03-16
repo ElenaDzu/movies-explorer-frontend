@@ -8,8 +8,8 @@
     max-height: 680px;
 }
 
-.aboutproject-title {
-    margin-top: 109px;
+.aboutproject__title {
+    margin-top: 116px;
     padding-bottom: 21px;
     display: flex;
     max-width: 1140px;
@@ -20,52 +20,57 @@
     font-style:normal;
     font-size: 22px;
     line-height: auto;
+    letter-spacing: -1px;
 }
 
-.aboutproject-subtitle {
+.aboutproject__subtitle {
     max-width: 1140px;
     display: flex;
     flex-direction: row;
 }
 
-.subtitle-text {
-    margin-top: 69px;
+.subtitle__text {
+    margin-top: 70px;
     margin-bottom: 26px;
+    margin-right: 40px;
     font-family: "Inter";
     font-weight: 400;
     font-style:normal;
     font-size: 20px;
     line-height: auto;
     text-align: left;
+    letter-spacing: -0.8px;
 }
 
-.aboutproject-plan {
+.aboutproject__plan {
     max-width: 1140px;
     display: flex;
     flex-direction: row;
 }
 
-.plan-text {
+.plan__text {
+    display: flex;
     margin-bottom: 107px;
+    margin-right: 5px;
     font-family: "Inter";
     font-weight: 400;
     font-style:normal;
     font-size: 14px;
-    line-height: auto;
+    line-height: 20px;
     text-align: left; 
 }
 
-.aboutproject-period {
-    margin-bottom: 14px;
+.aboutproject__period {
+    margin-bottom: 15px;
     max-width: 1140px;
     display: flex;
     flex-direction: row;
     background-color: #F2F2F2;
 }
 
-.period-text {
-    padding-top: 9px;
-    padding-bottom: 9px;
+.period__text {
+    padding-top: 14px;
+    padding-bottom: 10px;
     font-family: "Inter";
     font-weight: 400;
     font-style:normal;
@@ -74,18 +79,18 @@
     text-align: center;
 }
 
-.period-text:first-child {
+.period__text:first-child {
     width: 25%;
     background-color: #2BE080;
 }
 
-.aboutproject-part {
+.aboutproject__part {
     max-width: 1140px;
     display: flex;
     flex-direction: row;
 }
 
-.part-text {
+.part__text {
     margin-bottom: 110px;
     font-family: "Inter";
     font-weight: 400;
@@ -96,6 +101,6 @@
     color: #A0A0A0;
 }
 
-.part-text:first-child {
+.part__text:first-child {
     width: 25%;
 }

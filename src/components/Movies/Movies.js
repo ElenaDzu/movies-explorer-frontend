@@ -1,6 +1,8 @@
 import { React } from "react";
 import MoviesCardList from "../Movies/MoviesCardList/MoviesCardList";
+//import Preloader from "./Preloader/Preloader";
 import SearchForm from "./SearchForm/SearchForm";
+
 
 
 function Movies() {
@@ -9,6 +11,7 @@ function Movies() {
         <div className="movies">
             <SearchForm></SearchForm>
             <MoviesCardList></MoviesCardList>
+            {/* <Preloader></Preloader> */}
         </div>
     );
 }

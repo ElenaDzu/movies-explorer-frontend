@@ -7,6 +7,12 @@
     max-width: 1140px;
   }
   
+  @media (max-width: 1279px) and (min-width: 768px) {
+    .header {
+      max-width: 92.19%;
+    }
+  }
+
   .header__logo {
     padding: 0;
     margin: 18px auto 38px 0;
@@ -15,15 +21,23 @@
     width: 38px;
   }
 
+  @media (max-width: 1279px) and (min-width: 768px) {
+    .header__logo {
+      margin-right: 10px;
+    }
+  }
+
   .header__links {
+    margin: 0 auto;
     display: flex;
+    justify-content: flex-end;
   }
 
   .header__link {
     display: flex;
     justify-content: flex-end;
     padding: 8px 20px;
-    margin: 21px 29px 41px 0;
+    margin: 21px 0 41px 0;
     text-decoration: none;
     color: inherit;
     font-family: "Inter";
@@ -34,9 +48,7 @@
   }
 
   .header__link:first-child {
-    margin-left: 80%;
-    padding-left: 40px;
-    padding-right: 0;
+    padding-right: 30px;
   }
 
  .header__link:nth-child(2) {
@@ -66,10 +78,3 @@
    width: 100px;
    object-fit:contain;
  }
-
-  @media (max-width: 419px) and (min-width: 320px) {
-    .header {
-      margin-top: 28px;
-      max-width: 320px;
-    }
-  }

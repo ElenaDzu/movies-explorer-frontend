@@ -32,6 +32,7 @@
 
 @media (max-width: 1279px) and (min-width: 768px) {
     .aboutproject__title {
+        width: 95%;
         margin-left: 4%;
         margin-right: 4%;
         margin-top: 13%;
@@ -120,31 +121,37 @@
   }
 
 .aboutproject__period {
-    margin: 0 auto;
     width: 100%;
+    margin: 0 auto;
     max-width: 1140px;
     display: flex;
     flex-direction: row;
     background-color: #F2F2F2;
 }
 
+@media (max-width: 1279px) and (min-width: 768px) {
+    .aboutproject__period {
+        width: 97%;
+        margin: 0 auto;
+    }
+  }
+
 .period__text {
     width: 100%;
-    margin-top: 4px;
-    margin-bottom: 0;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    margin: 0 0;
+    display: flex;
+    padding: 13px 0;
     font-family: "Inter";
     font-weight: 400;
     font-style:normal;
     font-size: 14px;
     line-height: auto;
-    text-align: center;
+    justify-content: center;
 }
 
 @media (max-width: 1279px) and (min-width: 768px) {
     .period__text {
-        padding-left: 0%;
+        padding: 11px 0; 
     }
   }
 
@@ -155,7 +162,7 @@
 
 @media (max-width: 1279px) and (min-width: 768px) {
     .period__text:first-child {
-        width: 26.5%;
+        width: 29%;
     }
   }
 
@@ -179,6 +186,12 @@
     color: #A0A0A0;
 }
 
+@media (max-width: 1279px) and (min-width: 768px) {
+    .part__text {
+        width: 80%;
+    }
+  }
+
 .part__text:first-child {
-    width: 25%;
+    width: 28%;
 }

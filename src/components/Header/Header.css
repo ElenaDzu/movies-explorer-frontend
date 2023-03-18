@@ -9,7 +9,7 @@
   
   @media (max-width: 1279px) and (min-width: 768px) {
     .header {
-      max-width: 92.19%;
+      max-width: 95.5%;
     }
   }
 
@@ -23,11 +23,12 @@
 
   @media (max-width: 1279px) and (min-width: 768px) {
     .header__logo {
-      margin-right: 10px;
+      margin-left: 10px;
     }
   }
 
   .header__links {
+    width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: flex-end;

@@ -3,7 +3,7 @@
    max-width: 1140px;
 }
 
-.portfolio-name {
+.portfolio__name {
     margin-top: 100px;
     font-family: "Inter";
     font-weight:400;
@@ -14,7 +14,7 @@
     text-align: start;
 }
 
-.portfolio-item {
+.portfolio__item {
     display: flex;
     font-family: "Inter";
     font-weight: 400;
@@ -29,16 +29,16 @@
     letter-spacing: -1px;
 }
 
-.portfolio-item:first-of-type {
+.portfolio__item:first-of-type {
     margin-top: 30px;
 }
 
-.portfolio-item:last-child {
+.portfolio__item:last-child {
     border-bottom: none;
     margin-bottom: 120px;
 }
 
-.portfolio-span {
-    display: flex;
+.portfolio__span {
+    margin: 0 auto;
     margin-right: 0;
 }

@@ -21,6 +21,7 @@
 .aboutme__subtitle {
     padding-bottom: 25px;
     margin-top: 110px;
+    margin-bottom: 0;
     display: flex;
     max-width: 1140px;
     text-align: left;

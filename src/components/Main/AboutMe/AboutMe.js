@@ -5,8 +5,8 @@ import Image from "../../../images/student.svg"
 function AboutMe() {
     return (
         <div className="aboutme">
-           <h3 className="aboutme aboutme__subtitle">Студент</h3>
-           <div className="aboutme aboutme__card">
+           <h3 className="aboutme__subtitle">Студент</h3>
+           <div className="aboutme__card">
                 <div className="aboutme__text">
                     <h1 className="aboutme__title">Виталий</h1>
                     <h3 className="aboutme__prof">Фронтенд-разработчик, 30 лет</h3>

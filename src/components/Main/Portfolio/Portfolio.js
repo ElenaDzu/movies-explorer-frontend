@@ -4,10 +4,10 @@ import { React } from "react";
 function Portfolio() {
     return (
         <div className="portfolio">
-            <h5 className="portfolio portfolio-name">Портфолио</h5>
-            <nav className="portfolio portfolio-item">Статичный сайт<span className="portfolio portfolio-span">&#8599;</span></nav>
-            <nav className="portfolio portfolio-item">Адаптивный сайт<span className="portfolio portfolio-span">&#8599;</span></nav>
-            <nav className="portfolio portfolio-item">Одностраничное приложение<span className="portfolio portfolio-span">&#8599;</span></nav>
+            <h5 className="portfolio__name">Портфолио</h5>
+            <nav className="portfolio__item">Статичный сайт<span className="portfolio__span">&#8599;</span></nav>
+            <nav className="portfolio__item">Адаптивный сайт<span className="portfolio__span">&#8599;</span></nav>
+            <nav className="portfolio__item">Одностраничное приложение<span className="portfolio__span">&#8599;</span></nav>
         </div>
     );
 }

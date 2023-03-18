@@ -3,19 +3,28 @@
  flex-direction: row;
  margin: 0 auto;
  max-width: 1140px;
- width: 932px;
- justify-content: flex-start;
+ width: 100%;
+ flex-wrap: nowrap;
 }
 
 .searchform__form {
-    max-width: 1140px;
+    display: flex;
+    height: 48px;
+    width: 1140px;
     margin-bottom: 10px;
     margin-top: 80px;
     padding-bottom: 83px;
     border-bottom: #AAAAAA 1px solid;
 }
 
+.searchform__inputform {
+    display: flex;
+    position: relative;
+}
+
 .searchform__input {
+    width: 932px;
+    padding-left: 22px;
     border: none;
     border-radius: 30px;
     border: #AAAAAA solid 1px;
@@ -26,4 +35,27 @@
     height: 34px;
     border: none;
     padding: 7px;
+    right: 0;
+    position: absolute;
+}
+
+.filtercheckbox {
+  width: 67px;
+  padding: 0;
+}
+
+.filtercheckbox__text {
+    padding: 0;
+    width: 117px;
+    font-family: "Inter";
+    font-weight: 400;
+    font-style:normal;
+    font-size: 1px;
+    line-height: 18px;
+}
+
+.filtercheckbox__btn {
+    padding: 0;
+    width: 36px;
+    height: 20px;
 }

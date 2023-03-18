@@ -16,12 +16,14 @@
 
 .navtab__link {
     display: flex;
+    justify-content: center;
     text-decoration: none;
     margin: 0 5px;
-    padding: 10px 17px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 96px;
     background-color: #E8E8E8;
     color: #000;
-    max-width: 96px;
     border-radius: 10px;
     font-family: "Inter";
     font-weight: 400;

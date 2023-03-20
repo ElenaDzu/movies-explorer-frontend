@@ -15,7 +15,7 @@
   }
 
 .aboutproject__title {
-    margin: 142px auto 0;
+    margin: 112px auto 0;
     padding-bottom: 24px;
     display: flex;
     max-width: 1140px;
@@ -40,24 +40,51 @@
     }
   }
 
+  @media (max-width: 767px) and (min-width: 320px) {
+    .aboutproject__title {
+        width: 89%;
+        margin-left: 4%;
+        margin-right: 4%;
+        margin-top: 22%;
+        padding-bottom: 9%;
+        font-size: 18px;
+    }
+  }
+  @media (max-width: 767px) and (min-width: 320px) {
+    .aboutproject__description {
+        margin: 0 auto;
+        max-width: 98%;
+    }
+  } 
+
 .aboutproject__subtitle {
     margin: 0 auto;
     max-width: 1140px;
     width: 100%;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 40px;
 }
 
 @media (max-width: 1279px) and (min-width: 768px) {
     .aboutproject__subtitle {
-        margin: 0 0;
-        width: 100%;
+        width: 93%;
+        column-gap: 35px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 767px) and (min-width: 320px) {
+    .aboutproject__subtitle {
+        width: 93%;
+        grid-template-columns: repeat(1, 1fr);
     }
   }
 
 .subtitle__text {
-    width: 100%;
-    margin: 70px 40px 26px 0;
+    margin-top: 70px;
+    margin-bottom: 26px;
+    margin-right: 0;
     font-family: "Inter";
     font-weight: 400;
     font-style:normal;
@@ -67,37 +94,23 @@
     letter-spacing: -0.8px;
 }
 
-.subtitle__text:last-child {
-    padding-left: 3.6%;
-}
-
 @media (max-width: 1279px) and (min-width: 768px) {
     .subtitle__text {
-        padding-left: 3.6%;
-        margin-top: 10%;
-        margin-right: 0%;
+        margin-top: 23%;
     }
   }
 
-.aboutproject__plan {
-    width: 100%;
-    margin: 0 auto;
-    max-width: 1140px;
-    display: flex;
-    flex-direction: row;
-}
-
-@media (max-width: 1279px) and (min-width: 768px) {
-    .aboutproject__plan {
-        margin: 0 0;
-        width: 100%;
+  @media (max-width: 767px) and (min-width: 320px) {
+    .subtitle__text {
+        margin-bottom: 6%;
+        margin-top: 20.55%;
+        font-size: 18px;
+        letter-spacing: -0.8px;
     }
   }
 
 .plan__text {
-    width: 100%;
-    display: flex;
-    margin: 0 5px 107px 0;
+    margin: 0 auto auto 0;
     font-family: "Inter";
     font-weight: 400;
     font-style:normal;
@@ -106,23 +119,24 @@
     text-align: left; 
 }
 
-.plan__text:last-child {
-    padding-left: 3.6%;
-}
-
 @media (max-width: 1279px) and (min-width: 768px) {
     .plan__text {
-        padding-left: 3.6%;
-        margin-right:3%;
         margin-bottom: 12.7%;
         font-size: 12px;
         line-height: 18px;
     }
   }
 
+  @media (max-width: 767px) and (min-width: 320px) {
+    .plan__text {
+        font-size: 11px;
+        line-height: 16px;
+    }
+  }
+
 .aboutproject__period {
     width: 100%;
-    margin: 0 auto;
+    margin: 111px auto 0;
     max-width: 1140px;
     display: flex;
     flex-direction: row;
@@ -131,8 +145,16 @@
 
 @media (max-width: 1279px) and (min-width: 768px) {
     .aboutproject__period {
-        width: 97%;
-        margin: 0 auto;
+        max-width: 668px;
+        padding-left: 13px;
+        margin-top: 7%;
+    }
+  }
+
+  @media (max-width: 767px) and (min-width: 320px) {
+    .aboutproject__period {
+        margin-top: 18%;
+        width: 88.75%;
     }
   }
 
@@ -140,7 +162,7 @@
     width: 100%;
     margin: 0 0;
     display: flex;
-    padding: 13px 0;
+    padding: 12px 0;
     font-family: "Inter";
     font-weight: 400;
     font-style:normal;
@@ -151,7 +173,15 @@
 
 @media (max-width: 1279px) and (min-width: 768px) {
     .period__text {
-        padding: 11px 0; 
+        padding: 11px 0;
+        margin-top: 0;
+    }
+  }
+
+  @media (max-width: 767px) and (min-width: 320px) {
+    .period__text {
+        font-size: 11px;
+        margin: 0 auto;
     }
   }
 
@@ -162,7 +192,13 @@
 
 @media (max-width: 1279px) and (min-width: 768px) {
     .period__text:first-child {
-        width: 29%;
+        min-width: 20.96%;
+    }
+  }
+
+  @media (max-width: 767px) and (min-width: 320px) {
+    .period__text:first-child {
+        width: 52%;
     }
   }
 
@@ -173,6 +209,19 @@
     display: flex;
     flex-direction: row;
 }
+
+@media (max-width: 1279px) and (min-width: 768px) {
+    .aboutproject__part{
+       width: 90%;
+    }
+  }
+
+  @media (max-width: 769px) and (min-width: 320px) {
+    .aboutproject__part{
+        margin-top: 2%;
+        width: 88.75%;
+    }
+  }
 
 .part__text {
     width: 100%;
@@ -187,11 +236,31 @@
 }
 
 @media (max-width: 1279px) and (min-width: 768px) {
+  .part__text {
+      margin: 0 auto 90px;
+
+  }
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
     .part__text {
-        width: 80%;
+        font-size: 11px;
+        margin: 0 auto;
     }
   }
 
 .part__text:first-child {
-    width: 28%;
+    width: 25%;
 }
+
+@media (max-width: 1279px) and (min-width: 768px) {
+    .part__text:first-child {
+        padding-left: 11px; 
+    }
+  }
+
+  @media (max-width: 767px) and (min-width: 320px) {
+    .part__text:first-child {
+        width: 49%;
+    }
+  }

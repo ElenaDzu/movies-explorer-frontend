@@ -9,10 +9,10 @@
     background-color: #F5F5F5;
 }
 
-@media (max-width: 1279px) and (min-width: 768px) {
+@media (max-width: 767px) and (min-width: 320px) {
     .techs {
-      width: 88.5%;
-      padding-left: 12px;
+        max-height: 4317px;
+        background-color: #FFFFFF;
     }
   }
 
@@ -34,7 +34,18 @@
 
 @media (max-width: 1279px) and (min-width: 768px) {
     .techs__subtitle {
-        margin: 70px auto 0;
+        max-width: 652px;
+        margin-top: 90px;
+        padding-bottom: 23px;
+    }
+  }
+
+  @media (max-width: 767px) and (min-width: 320px) {
+    .techs__subtitle {
+        max-width: 91%;
+        font-size: 18px;
+        margin-top: 43.6%;
+        padding-bottom: 8.8%;
     }
   }
 
@@ -50,6 +61,22 @@
     line-height: 58px;
 }
 
+@media (max-width: 1279px) and (min-width: 768px) {
+    .techs__title {
+        margin-top: 80px;
+        letter-spacing: -3px;
+    }
+  }
+
+  @media (max-width: 767px) and (min-width: 320px) {
+    .techs__title {
+        margin-top: 15.46%;
+        letter-spacing: -0.7px;
+        font-size: 30px;
+        line-height: auto;
+    }
+  }
+
 .techs__text {
     margin: 24px auto 0;
     width: 100%;
@@ -62,6 +89,26 @@
     letter-spacing: -0.5px;
 }
 
+@media (max-width: 1279px) and (min-width: 768px) {
+    .techs__text {
+        font-size: 12px;
+        line-height: 18px;
+        margin-top: 22px;
+    }
+  }
+
+  @media (max-width: 767px) and (min-width: 320px) {
+    .techs__text {
+        font-size: 11px;
+        line-height: 16px;
+        margin-top: 4%;
+        width: 82%;
+        letter-spacing: -0.3px;
+    }
+  }
+
+ 
+
 .techs__items{
     margin: 0 auto;
     width: 100%;
@@ -69,6 +116,17 @@
     flex-direction: row;
     justify-content: center;
 }
+
+@media (max-width: 767px) and (min-width: 320px) {
+    .techs__items {
+        margin-top: 15.5%;
+        display: grid;
+        grid-template-columns: repeat(2, 35%);
+        grid-template-rows: repeat(4, 22%);
+        gap: 10px;
+        width: 78%;
+    }
+  }
 
 .techs__item {
     width: 100%;
@@ -87,3 +145,22 @@
     letter-spacing: -0.5px;
     justify-content: center;
 }
+
+@media (max-width: 1279px) and (min-width: 768px) {
+    .techs__item {
+        margin-top: 83px;
+        margin-bottom: 90px;
+        font-size: 12px;
+        max-width: 84px;
+    }
+  }
+
+  @media (max-width: 767px) and (min-width: 320px) {
+    .techs__item {
+        /* margin-top: 83px;
+        margin-bottom: 90px; */
+        font-size: 12px;
+        max-width: 84px;
+        margin: 0 0;
+    }
+  }

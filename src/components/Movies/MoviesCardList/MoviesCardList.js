@@ -65,30 +65,30 @@ function MoviesCardList() {
             duration: "1ч 59м",
             _id: 8
         },
-        {
-            src: card9,
-            title: "Дженис: Маленькая девочка грустит",
-            duration: "1ч 42м",
-            _id: 9
-        },
-        {
-            src: card10,
-            title: "Соберись перед прыжком",
-            duration: "1ч 10м",
-            _id: 10
-        },
-        {
-            src: card11,
-            title: "Пи Джей Харви: A dog called money",
-            duration: "1ч 4м",
-            _id: 11
-        },
-        {
-            src: card12,
-            title: "По волнам: Искусство звука в кино",
-            duration: "1ч 7м",
-            _id: 12
-        }
+        // {
+        //     src: card9,
+        //     title: "Дженис: Маленькая девочка грустит",
+        //     duration: "1ч 42м",
+        //     _id: 9
+        // },
+        // {
+        //     src: card10,
+        //     title: "Соберись перед прыжком",
+        //     duration: "1ч 10м",
+        //     _id: 10
+        // },
+        // {
+        //     src: card11,
+        //     title: "Пи Джей Харви: A dog called money",
+        //     duration: "1ч 4м",
+        //     _id: 11
+        // },
+        // {
+        //     src: card12,
+        //     title: "По волнам: Искусство звука в кино",
+        //     duration: "1ч 7м",
+        //     _id: 12
+        // }
 
     ]
 

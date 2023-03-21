@@ -2,6 +2,7 @@
     margin: 0 auto;
     width: 100%;
     max-width: 1280px;
+    height: 172px;
     background-color: #FAFAFA ;
     font-family: "Inter";
     font-weight: 400;
@@ -34,11 +35,13 @@
 
 @media (max-width: 1279px) and (min-width: 768px) {
     .footer__project{
-        padding-top: 59px;
+      
+        max-width: 768px;
+        width: 93%;
     }
   }
 
-  @media (max-width: 768px) and (min-width: 320px) {
+  @media (max-width: 767px) and (min-width: 320px) {
     .footer__project{
         font-size: 12px;
         padding-top: 60px;
@@ -52,7 +55,7 @@
     display: flex;
     flex-direction: row;
     margin: 0 auto;
-    padding: 19px 0;
+    padding: 22px 0;
     align-items: center;
 }
 

@@ -9,7 +9,7 @@ function SearchForm() {
                   <input className="searchform__input" name="form" type="text" placeholder="Фильм"/>
                   <img className="searchform__image" alt="Иконка поисковика" src={FindPath}></img>
                 </div>
-                <div className="searchform filtercheckbox">
+                <div className="filtercheckbox">
                     <p className="filtercheckbox__text">Короткометражки</p>
                     <button className="filtercheckbox__btn"></button>
                 </div>

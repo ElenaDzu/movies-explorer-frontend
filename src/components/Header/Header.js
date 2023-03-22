@@ -18,7 +18,7 @@ function Header({ userInfo }) {
           <a className="header__link" href="/sign-in">Войти</a>
         </nav>
       ) : (
-        <nav className="header__links">
+        <nav className="header__links-in">
           <a className="header__link-in" href="/movies">Фильмы</a>
           <a className="header__link-in" href="/saved-movies">Сохраненные фильмы</a>
           <a className="header__profile" href="/profile">

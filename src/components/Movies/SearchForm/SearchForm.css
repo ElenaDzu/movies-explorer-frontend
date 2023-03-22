@@ -36,8 +36,9 @@
       padding: 0;
       width: 100%;
       flex-direction: column;
-      height: 226px;
+      height: 156px;
       margin-top: 14%;
+      padding-bottom: 0;
     }
   }
 
@@ -57,7 +58,9 @@
   @media (max-width: 767px) and (min-width: 320px) {
     .searchform__inputform {
       width: 300px;
-      margin: 0 auto 0;
+      margin: 0 auto;
+      /* padding-left: 2%;
+      padding-right: 2%; */
     }
   }
 
@@ -87,10 +90,11 @@
 
   @media (max-width: 767px) and (min-width: 320px) {
     .searchform__input {
-      font-size: 12px;
-      line-height: auto;
+      font-size: 11px;
+      line-height: 18px;
       padding-top: 15px;
       padding-bottom: 15px;
+      padding-left: 5%;
     }
   }
 
@@ -121,7 +125,7 @@
 
   @media (max-width: 767px) and (min-width: 320px) {
     .filtercheckbox {
-        margin: 10.5% auto;
+        margin: 14% auto 4%;
         height: 18px;
     }
   }
@@ -156,6 +160,6 @@
 @media (max-width: 767px) and (min-width: 320px) {
   .filtercheckbox__btn {
     font-size: 11px;
-    margin: 0;
+    margin: 0 auto;
   }
 }

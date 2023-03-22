@@ -21,18 +21,56 @@ function App() {
 
   return (
     <div className="App">
-      <Header userInfo={userInfo}></Header>
+
       <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Main/>}/>
-        <Route path="/sign-in" element={<Login handleLogin={ handleUserLogin }/>}/>
-        <Route path="/sign-up" element={<Register/>}/>
-        <Route path="/movies" element={<Movies/>}/>
-        <Route path="/saved-movies" element={<SavedMovies/>}/>
-        <Route path="/profile" element={<Profile/>}/>
+      <Route path="/sign-in" element={<Login handleLogin={ handleUserLogin }/>}/>
+      <Route path="/sign-up" element={<Register/>}/>
+      <Route
+          exact path='/'
+          element={
+            <>
+              <Header />
+              <Main />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          exact path='/movies'
+          element={
+            <>
+              <Header />
+              <Movies />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          exact path='/profile'
+          element={
+            <>
+              {/* <Header /> */}
+              <Profile />
+            </>
+          }
+        />
+      <Route
+          exact path='/saved-movies'
+          element={
+            <>
+              <Header />
+              <SavedMovies />
+              <Footer />
+            </>
+          }
+        />
+        {/* <Route
+          path='*'
+          element={<404 />}
+        /> */}
       </Routes>
       </BrowserRouter>
-      <Footer></Footer>
     </div>
   );
 }

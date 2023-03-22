@@ -23,8 +23,15 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    max-width: 396px;
     margin: 40px auto 0 0;
 }
+
+@media (max-width: 767px) and (min-width: 320px) {
+    .page__form {
+      margin-right: 15px;
+    }
+  }
 
 .page__label {
     display: flex;
@@ -41,7 +48,6 @@
     width: 100%;
     height: 46px;
     margin: 20px auto 10px 0;
-    padding: 0 0 0 15px;
     background-color: #F9F9F9;
     border: none;
     border-radius: 10px;
@@ -65,7 +71,6 @@
 }
 
 .page__btn {
-    padding: 0;
     margin-top: 69px;
     padding: 13px 0 15px;
     background-color: #2BE080;

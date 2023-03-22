@@ -54,7 +54,7 @@ function Login({handleLogin}) {
           value={loginData.password}
           name="password"
         />
-        <span className="page__input-error">Что-то пошло не так...</span>
+        {/* <span className="page__input-error">Что-то пошло не так...</span> */}
         <button type="submit" className="page__btn">
           Войти
         </button>

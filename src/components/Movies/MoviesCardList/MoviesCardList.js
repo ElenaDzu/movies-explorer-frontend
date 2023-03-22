@@ -47,24 +47,24 @@ function MoviesCardList() {
             duration: "1ч 44м",
             _id: 4
         },
-        {
-            src: card5,
-            title: "Книготорговцы»",
-            duration: "1ч 37м",
-            _id: 5
-        },
-        {
-            src: card6,
-            title: "Когда я думаю о Германии ночью",
-            duration: "1ч 56м",
-            _id: 6
-        },
-        {
-            src: card8,
-            title: "Gimme Danger: История Игги и The Stooge...",
-            duration: "1ч 59м",
-            _id: 8
-        },
+        // {
+        //     src: card5,
+        //     title: "Книготорговцы»",
+        //     duration: "1ч 37м",
+        //     _id: 5
+        // },
+        // {
+        //     src: card6,
+        //     title: "Когда я думаю о Германии ночью",
+        //     duration: "1ч 56м",
+        //     _id: 6
+        // },
+        // {
+        //     src: card8,
+        //     title: "Gimme Danger: История Игги и The Stooge...",
+        //     duration: "1ч 59м",
+        //     _id: 8
+        // },
         // {
         //     src: card9,
         //     title: "Дженис: Маленькая девочка грустит",

@@ -19,6 +19,13 @@
     }
   }
 
+  @media (max-width: 767px) and (min-width: 320px) {
+    .moviescard__image {
+        width: 300px;
+        height: 168px;
+    }
+  }
+
 .moviescard__block {
     display: flex;
     flex-direction: row;
@@ -42,6 +49,14 @@
 @media (max-width: 1279px) and (min-width: 768px) {
     .moviescard__title  {
         max-width: 260px;
+        margin-right: 25px;
+        margin-left: 14px; 
+    }
+  }
+
+  @media (max-width: 767px) and (min-width: 320px) {
+    .moviescard__title  {
+        max-width: 240px;
         margin-right: 25px;
         margin-left: 14px; 
     }

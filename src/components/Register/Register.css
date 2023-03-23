@@ -3,12 +3,21 @@
     flex-direction: column;
     margin: 0 auto;
     max-width: 396px;
+    height: 100%;
 }
 
 .page__logo {
     margin: 70px auto 0 0;
     width: 38px;
 }
+
+@media (max-width: 767px) and (min-width: 320px) {
+    .page__logo {
+        padding-top: 51px;
+        margin-left: auto;
+        margin-top: auto;
+    }
+  }
 
 .page__title {
     margin: 40px auto 0 0;
@@ -19,12 +28,26 @@
     line-height: auto;
 }
 
+@media (max-width: 767px) and (min-width: 320px) {
+    .page__title {
+        padding-top: 47px;
+        margin-left: auto;
+        margin-top: auto;
+    }
+  }
+
 .page__form {
     display: flex;
     flex-direction: column;
     width: 100%;
     margin: 40px auto 0 0;
 }
+
+@media (max-width: 767px) and (min-width: 320px) {
+    .page__form {
+        margin-top: 0;
+    }
+  }
 
 .page__label {
     display: flex;
@@ -34,14 +57,26 @@
     font-weight: 400;
     font-style:normal;
     font-size: 10px;
+    margin-top: 10px;
 }
+
+@media (max-width: 767px) and (min-width: 320px) {
+    .page__label:last-of-type {
+        margin-top: 15px;
+    }
+  }
+@media (max-width: 767px) and (min-width: 320px) {
+    .page__label:nth-child(3) {
+        margin-top: 20px;
+    }
+  }
 
 .page__text {
     display: flex;
-    width: 100%;
+    width: 95%;
     height: 46px;
-    margin: 20px auto 10px 0;
-    padding: 0 0 0 15px;
+    margin: 20px auto 0;
+    padding-left: 15px;
     background-color: #F9F9F9;
     border: none;
     border-radius: 10px;
@@ -64,9 +99,9 @@
     line-height: auto;
 }
 
-.page__btn {
+.page__btn-reg {
     padding: 0;
-    margin-top: 69px;
+    margin-top: 19.5%;
     padding: 13px 0 15px;
     background-color: #2BE080;
     border: none;
@@ -78,6 +113,13 @@
     color: #FFFFFF;
 }
 
+@media (max-width: 767px) and (min-width: 320px) {
+    .page__btn-reg {
+        margin-top: 160px;
+        font-size: 12px;
+    }
+  }
+
 .page__block {
     display: flex;
     flex-direction: row;
@@ -88,6 +130,12 @@
     font-style:normal;
     font-size: 14px;
 }
+
+@media (max-width: 767px) and (min-width: 320px) {
+    .page__block {
+        font-size: 12px;
+    }
+  }
 
 .page__block:first-child {
     margin-top: 0;

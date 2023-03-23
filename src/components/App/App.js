@@ -50,7 +50,7 @@ function App() {
           exact path='/profile'
           element={
             <>
-              {/* <Header /> */}
+              <Header />
               <Profile />
             </>
           }

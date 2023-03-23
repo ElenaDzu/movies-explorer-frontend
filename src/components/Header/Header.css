@@ -7,13 +7,34 @@
     max-width: 1140px;
   }
   
-  @media (max-width: 1279px) and (min-width: 768px) {
+  @media (max-width: 1280px) and (min-width: 769px) {
     .header {
       max-width: 95.5%;
     }
+
+    .header__link-in {
+      display: flex;
+      flex-direction: column;
+      width: 100px;
+      padding: 0;
+      margin: 2px 16px 0 44px;
+      text-decoration: none;
+      color: inherit;
+      font-family: "Inter";
+      font-weight: 400;
+      font-style:normal;
+      font-size: 13px;
+      line-height: 18px;
+      align-items: center;
+    }
+    
+      .header__link-in:nth-last-child(2) {
+        margin-right: 66.6%;
+        margin-left: 0;
+    }
   }
 
-  @media (max-width: 767px) and (min-width: 320px) {
+  @media (max-width: 768px) and (min-width: 320px) {
     .header {
       max-width: 98%;
     }
@@ -27,7 +48,7 @@
     width: 38px;
   }
 
-  @media (max-width: 1279px) and (min-width: 768px) {
+  @media (max-width: 1280px) and (min-width: 769px) {
     .header__logo {
       margin-left: 10px;
       margin-bottom: 32px;
@@ -100,23 +121,72 @@
 
 }
 
- .header__link-in {
+@media (max-width: 768px) and (min-width: 320px) {
+  .header__links-in {
+    display: none;
+    position: absolute;
+    right: 0px;
+    max-width: 708px;
+    
+  }
+
+}
+
+@media (max-width: 768px) and (min-width: 320px) {
+ 
+  .header__overlay {
+    display: none;
+}
+
+.header__overlay_opened {
+  display: block;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 1;
+  background-color: black;
+  opacity: 0.2;
+}
+
+.header__link-in {
   display: flex;
+  flex-direction: column;
   padding: 0;
-  margin: 2px 16px 0 44px;
+  margin: 0 auto;
   text-decoration: none;
   color: inherit;
   font-family: "Inter";
   font-weight: 400;
   font-style:normal;
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 18px;
+  line-height: auto;
   align-items: center;
 }
 
-  .header__link-in:nth-last-child(2) {
-    margin-right: 66.6%;
-    margin-left: 0;
+  .header__links-in_opened {
+    display: block;
+    width: 520px;
+    height: 1024px;
+    position: fixed;
+    background-color: white;
+    z-index: 2;
+  }
+
+  .close-menu {
+    margin: 22px 0 105px auto;
+    padding: 0;
+    display: block;
+    width: 22px;
+    height: 22px;
+    border: none;
+    background-color: white;
+  }
+
+  .header__close-btn {
+    width: 100%;
+  }
+
 }
 
   .header__profile {
@@ -124,3 +194,19 @@
    width: 100px;
    object-fit:contain;
  }
+
+ .header__burger {
+    margin: 15px 15px 0 80%;
+    max-width: 44px;
+    width: 100%;
+    position: absolute;
+    display: block;
+    background: white;
+    border: none;
+ } 
+
+
+
+ .header__burger_opened {
+  display: none;
+} 

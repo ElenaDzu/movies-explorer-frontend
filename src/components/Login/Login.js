@@ -25,7 +25,7 @@ function Login({handleLogin}) {
     <section className="page">
       <a href="/">
         <img
-          className="page page__logo"
+          className="page__logo"
           src={logoPath}
           alt="Логотип проекта"
         />

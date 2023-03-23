@@ -7,7 +7,7 @@ function Register() {
     <section className="page">
       <a href="#">
         <img
-          className="page page__logo"
+          className="page__logo"
           src={logoPath}
           alt="Логотип проекта"
         />
@@ -47,7 +47,7 @@ function Register() {
           name="password"
         />
         <span className="page__input-error">Что-то пошло не так...</span>
-        <button type="submit" className="page__btn">
+        <button type="submit" className="page__btn-reg">
           Зарегистрироваться
         </button>
         <div className="page__block">

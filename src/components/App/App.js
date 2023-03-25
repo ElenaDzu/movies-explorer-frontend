@@ -3,6 +3,7 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import "./App.css";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
+import Error from "../Error/Error";
 import Register from "../Register/Register";
 import Login from "../Login/Login";
 import Main from "../Main/Main";
@@ -71,10 +72,10 @@ function App() {
               </>
             }
           />
-          {/* <Route
+          <Route
           path='*'
-          element={<404 />}
-        /> */}
+          element={<Error/>}
+        />
         </Routes>
       </BrowserRouter>
     </div>

@@ -1,40 +1,35 @@
 import { React, useState } from "react";
 import logoPath from "../../images/header-logom.svg";
 
-function Login({handleLogin}) {
+function Login({ handleLogin }) {
+  const [loginData, setLoginData] = useState({
+    email: "",
+    password: "",
+  });
 
-    const [loginData, setLoginData] = useState({
-      email: "",
-      password: "",
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setLoginData({
+      ...loginData,
+      [name]: value,
     });
+  };
 
-    const handleChange = (e) => {
-      const { name, value } = e.target;
-      setLoginData({
-        ...loginData,
-        [name]: value,
-      });
-    };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    handleLogin(loginData);
+  };
 
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      handleLogin(loginData);
-    }
-
-    return (
+  return (
     <section className="page">
       <a href="/">
-        <img
-          className="page__logo"
-          src={logoPath}
-          alt="Логотип проекта"
-        />
+        <img className="page page__logo" src={logoPath} alt="Логотип проекта" />
       </a>
       <h1 className="page__title">Рады видеть!</h1>
-      <form  className="page__form" 
-      onSubmit={handleSubmit}
-      >
-        <label for="name" className="page__label" >E-mail</label>
+      <form className="page__form" onSubmit={handleSubmit}>
+        <label for="name" className="page__label">
+          E-mail
+        </label>
         <input
           required
           name="email"
@@ -44,7 +39,9 @@ function Login({handleLogin}) {
           onChange={handleChange}
           value={loginData.email}
         />
-        <label for="name" className="page__label" >Пароль</label>
+        <label for="name" className="page__label">
+          Пароль
+        </label>
         <input
           required
           className="page__text"
@@ -60,13 +57,13 @@ function Login({handleLogin}) {
         </button>
         <div className="page__block">
           <p className="page__block">Еще не зарегистрированы?</p>
-          <a className="page__link" href="" >
+          <a className="page__link" href="">
             Регистрация
           </a>
         </div>
       </form>
     </section>
-    );
+  );
 }
 
 export default Login;

@@ -36,20 +36,20 @@
     }
   }
 
-.page__form {
+.page__form-reg {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin: 40px auto 0 0;
+    margin: 23px auto 0 0;
 }
 
 @media (max-width: 767px) and (min-width: 320px) {
-    .page__form {
-        margin-top: 0;
+    .page__form-reg {
+        margin-top: 60px;
     }
   }
 
-.page__label {
+.page__label-reg {
     display: flex;
     margin-left: 0;
     color: #A0A0A0;
@@ -57,25 +57,44 @@
     font-weight: 400;
     font-style:normal;
     font-size: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 @media (max-width: 767px) and (min-width: 320px) {
-    .page__label:last-of-type {
+    .page__label-reg:last-of-type {
         margin-top: 15px;
     }
-  }
-@media (max-width: 767px) and (min-width: 320px) {
-    .page__label:nth-child(3) {
+
+    .page__label-reg:nth-child(3) {
         margin-top: 20px;
     }
   }
 
-.page__text {
+  @media (max-width: 1279px) and (min-width: 768px) {
+
+    .page__form-reg {
+        margin-top: 23px;
+    }
+    
+    .page__label-reg {
+        margin-top: 20px;
+    }
+
+    .page__label-reg:last-of-type {
+        margin-top: 20px;
+    }
+ 
+    .page__label-reg:nth-child(3) {
+        margin-top: 20px;
+    }
+
+  }
+
+.page__text-reg {
     display: flex;
     width: 95%;
     height: 46px;
-    margin: 20px auto 0;
+    margin: 10px auto 0;
     padding-left: 15px;
     background-color: #F9F9F9;
     border: none;
@@ -87,7 +106,7 @@
     line-height: auto;
 }
 
-.page__input-error {
+.page__input-errorreg {
     display: flex;
     margin-left: 0;
     margin-top: 10px;
@@ -99,9 +118,16 @@
     line-height: auto;
 }
 
+@media (max-width: 1279px) and (min-width: 768px) {
+
+    .page__input-errorreg {
+        margin-top: 5px;
+    }
+  }
+
 .page__btn-reg {
     padding: 0;
-    margin-top: 19.5%;
+    margin-top: 16%;
     padding: 13px 0 15px;
     background-color: #2BE080;
     border: none;
@@ -113,12 +139,20 @@
     color: #FFFFFF;
 }
 
+@media (max-width: 1279px) and (min-width: 768px) {
+    .page__btn-reg {
+        margin-top: 69px;
+    }
+  }
+
 @media (max-width: 767px) and (min-width: 320px) {
     .page__btn-reg {
         margin-top: 160px;
         font-size: 12px;
     }
   }
+
+
 
 .page__block {
     display: flex;

@@ -1,5 +1,3 @@
-
-
 @import url(./vendor/normalize.css);
 @import url(./vendor/fonts/fonts.css);
 @import url(./components/Header/Header.css);
@@ -17,8 +15,6 @@
 @import url(./components/Register/Register.css);
 @import url(./components/Login/Login.css);
 
- /* * {
+/* * {
   outline:red solid 1px;
 }   */
-
-  

@@ -1,271 +1,272 @@
 .aboutproject {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    padding: 0;
-    width: 100%;
-    max-width: 1280px;
-    max-height: 680px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  max-width: 1280px;
+  max-height: 680px;
 }
 
 @media (max-width: 1279px) and (min-width: 768px) {
-    .aboutproject {
-        width: 94%;
-    }
+  .aboutproject {
+    width: 94%;
   }
+}
 
 .aboutproject__title {
-    margin: 112px auto 0;
-    padding-bottom: 24px;
-    display: flex;
-    max-width: 1140px;
-    width: 100%;
-    text-align: left;
-    border-bottom: 1px black solid;
-    font-family: "Inter";
-    font-weight: 400;
-    font-style:normal;
-    font-size: 22px;
-    line-height: auto;
-    letter-spacing: -1px;
+  margin: 112px auto 0;
+  padding-bottom: 24px;
+  display: flex;
+  max-width: 1140px;
+  width: 100%;
+  text-align: left;
+  border-bottom: 1px black solid;
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  line-height: auto;
+  letter-spacing: -1px;
 }
 
 @media (max-width: 1279px) and (min-width: 768px) {
-    .aboutproject__title {
-        width: 95%;
-        margin-left: 4%;
-        margin-right: 4%;
-        margin-top: 13%;
-        padding-bottom: 3%;
-    }
-  }
-
-  @media (max-width: 767px) and (min-width: 320px) {
-    .aboutproject__title {
-        width: 89%;
-        margin-left: 4%;
-        margin-right: 4%;
-        margin-top: 22%;
-        padding-bottom: 9%;
-        font-size: 18px;
-    }
-  }
-  @media (max-width: 767px) and (min-width: 320px) {
-    .aboutproject__description {
-        margin: 0 auto;
-        max-width: 98%;
-    }
-  } 
-
-.aboutproject__subtitle {
-    margin: 0 auto;
-    max-width: 1140px;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 40px;
-}
-
-@media (max-width: 1279px) and (min-width: 768px) {
-    .aboutproject__subtitle {
-        width: 93%;
-        column-gap: 35px;
-        grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  @media (max-width: 767px) and (min-width: 320px) {
-    .aboutproject__subtitle {
-        width: 93%;
-        grid-template-columns: repeat(1, 1fr);
-    }
-  }
-
-.subtitle__text {
-    margin-top: 70px;
-    margin-bottom: 26px;
-    margin-right: 0;
-    font-family: "Inter";
-    font-weight: 400;
-    font-style:normal;
-    font-size: 20px;
-    line-height: auto;
-    text-align: left;
-    letter-spacing: -0.8px;
-}
-
-@media (max-width: 1279px) and (min-width: 768px) {
-    .subtitle__text {
-        margin-top: 23%;
-    }
-  }
-
-  @media (max-width: 767px) and (min-width: 320px) {
-    .subtitle__text {
-        margin-bottom: 6%;
-        margin-top: 20.55%;
-        font-size: 18px;
-        letter-spacing: -0.8px;
-    }
-  }
-
-.plan__text {
-    margin: 0 auto auto 0;
-    font-family: "Inter";
-    font-weight: 400;
-    font-style:normal;
-    font-size: 14px;
-    line-height: 20px;
-    text-align: left; 
-}
-
-@media (max-width: 1279px) and (min-width: 768px) {
-    .plan__text {
-        margin-bottom: 12.7%;
-        font-size: 12px;
-        line-height: 18px;
-    }
-  }
-
-  @media (max-width: 767px) and (min-width: 320px) {
-    .plan__text {
-        font-size: 11px;
-        line-height: 16px;
-    }
-  }
-
-.aboutproject__period {
-    width: 100%;
-    margin: 111px auto 0;
-    max-width: 1140px;
-    display: flex;
-    flex-direction: row;
-    background-color: #F2F2F2;
-}
-
-@media (max-width: 1279px) and (min-width: 768px) {
-    .aboutproject__period {
-        width: 93.5%;
-        margin-top: 7%;
-        
-    }
-  }
-
-  @media (max-width: 767px) and (min-width: 320px) {
-    .aboutproject__period {
-        margin-top: 18%;
-        width: 88.75%;
-    }
-  }
-
-.period__text {
-    width: 100%;
-    margin: 0 0;
-    display: flex;
-    padding: 12px 0;
-    font-family: "Inter";
-    font-weight: 400;
-    font-style:normal;
-    font-size: 14px;
-    line-height: auto;
-    justify-content: center;
-}
-
-@media (max-width: 1279px) and (min-width: 768px) {
-    .period__text {
-        padding: 11px 0;
-        margin-top: 0;
-    }
-  }
-
-  @media (max-width: 767px) and (min-width: 320px) {
-    .period__text {
-        font-size: 11px;
-        margin: 0 auto;
-    }
-  }
-
-.period__text:first-child {
-    width: 25%;
-    background-color: #2BE080;
-}
-
-@media (max-width: 1279px) and (min-width: 768px) {
-    .period__text:first-child {
-        width: 27%;
-        margin-right: 1%;
-    }
-  }
-
-  @media (max-width: 767px) and (min-width: 320px) {
-    .period__text:first-child {
-        width: 52%;
-    }
-  }
-
-.aboutproject__part {
-    width: 100%;
-    margin: 0 auto;
-    max-width: 1140px;
-    display: flex;
-    flex-direction: row;
-}
-
-@media (max-width: 1279px) and (min-width: 768px) {
-    .aboutproject__part{
-       margin-top: 2%;
-       /* margin-left: 4.3%; */
-       width: 92%;
-       /* margin-right: 4%; */
-
-    }
-  }
-
-  @media (max-width: 767px) and (min-width: 320px) {
-    .aboutproject__part{
-        margin-top: 2%;
-        width: 88.75%;
-    }
-  }
-
-.part__text {
-    width: 100%;
-    margin-bottom: 110px;
-    font-family: "Inter";
-    font-weight: 400;
-    font-style:normal;
-    font-size: 14px;
-    line-height: 17px;
-    text-align: center; 
-    color: #A0A0A0;
-}
-
-@media (max-width: 1279px) and (min-width: 768px) {
-  .part__text {
-      margin: 0 auto 90px;
-      padding-right: 0;
+  .aboutproject__title {
+    width: 95%;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-top: 13%;
+    padding-bottom: 3%;
   }
 }
 
 @media (max-width: 767px) and (min-width: 320px) {
-    .part__text {
-        font-size: 11px;
-        margin: 0 auto;
-    }
+  .aboutproject__title {
+    padding-left: 1.3%;
+    width: 89%;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-top: 22%;
+    padding-bottom: 9%;
+    font-size: 18px;
   }
+}
+@media (max-width: 767px) and (min-width: 320px) {
+  .aboutproject__description {
+    margin: 0 auto;
+    max-width: 98%;
+  }
+}
 
-.part__text:first-child {
-    width: 25%;
+.aboutproject__subtitle {
+  margin: 0 auto;
+  max-width: 1140px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 40px;
 }
 
 @media (max-width: 1279px) and (min-width: 768px) {
-    .part__text:first-child {
-      margin-right: 2.9%;
-    }
+  .aboutproject__subtitle {
+    width: 93%;
+    column-gap: 35px;
+    grid-template-columns: repeat(2, 1fr);
   }
+}
 
-  @media (max-width: 767px) and (min-width: 320px) {
-    .part__text:first-child {
-        width: 49%;
-    }
+@media (max-width: 767px) and (min-width: 320px) {
+  .aboutproject__subtitle {
+    width: 93%;
+    grid-template-columns: repeat(1, 1fr);
   }
+}
+
+.subtitle__text {
+  margin-top: 70px;
+  margin-bottom: 26px;
+  margin-right: 0;
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: auto;
+  text-align: left;
+  letter-spacing: -0.8px;
+}
+
+@media (max-width: 1279px) and (min-width: 768px) {
+  .subtitle__text {
+    margin-top: 23%;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+  .subtitle__text {
+    margin-bottom: 6%;
+    margin-top: 20.55%;
+    padding-left: 1.39%;
+    font-size: 18px;
+    letter-spacing: -0.8px;
+  }
+}
+
+.plan__text {
+  margin: 0 auto auto 0;
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+}
+
+@media (max-width: 1279px) and (min-width: 768px) {
+  .plan__text {
+    margin-bottom: 12.7%;
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+  .plan__text {
+    font-size: 11px;
+    line-height: 16px;
+    padding-left: 1.39%;
+  }
+}
+
+.aboutproject__period {
+  width: 100%;
+  margin: 111px auto 0;
+  max-width: 1140px;
+  display: flex;
+  flex-direction: row;
+  background-color: #f2f2f2;
+}
+
+@media (max-width: 1279px) and (min-width: 768px) {
+  .aboutproject__period {
+    width: 93.5%;
+    margin-top: 7%;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+  .aboutproject__period {
+    margin-top: 18%;
+    width: 88.75%;
+  }
+}
+
+.period__text {
+  width: 100%;
+  margin: 0 0;
+  display: flex;
+  padding: 12px 0;
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: auto;
+  justify-content: center;
+}
+
+@media (max-width: 1279px) and (min-width: 768px) {
+  .period__text {
+    padding: 11px 0;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+  .period__text {
+    font-size: 11px;
+    margin: 0 auto;
+  }
+}
+
+.period__text:first-child {
+  width: 25%;
+  background-color: #2be080;
+}
+
+@media (max-width: 1279px) and (min-width: 768px) {
+  .period__text:first-child {
+    width: 27%;
+    margin-right: 1%;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+  .period__text:first-child {
+    width: 52%;
+  }
+}
+
+.aboutproject__part {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1140px;
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 1279px) and (min-width: 768px) {
+  .aboutproject__part {
+    margin-top: 2%;
+    /* margin-left: 4.3%; */
+    width: 92%;
+    /* margin-right: 4%; */
+  }
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+  .aboutproject__part {
+    margin-top: 2%;
+    width: 88.75%;
+  }
+}
+
+.part__text {
+  width: 100%;
+  margin-bottom: 110px;
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #a0a0a0;
+}
+
+@media (max-width: 1279px) and (min-width: 768px) {
+  .part__text {
+    margin: 0 auto 90px;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+  .part__text {
+    font-size: 11px;
+    margin: 0 auto;
+  }
+}
+
+.part__text:first-child {
+  width: 25%;
+}
+
+@media (max-width: 1279px) and (min-width: 768px) {
+  .part__text:first-child {
+    margin-right: 2.9%;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+  .part__text:first-child {
+    width: 49%;
+  }
+}

@@ -1,58 +1,58 @@
 .promo {
-    display: flex;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1200px;
-    background-color: #F5F5F5;
-    align-items: center;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  background-color: #f5f5f5;
+  align-items: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 @media (max-width: 1279px) and (min-width: 768px) {
-    .promo {
-      width: 96.68%;
-    }
+  .promo {
+    width: 96.68%;
   }
+}
 
-  @media (max-width: 767px) and (min-width: 320px) {
-    .promo {
-      width: 91.1%;
-    }
+@media (max-width: 767px) and (min-width: 320px) {
+  .promo {
+    width: calc(100% - 28px);
   }
+}
 
 .promo__text {
-    margin: 160px auto 151px;
-    display: flex;
-    max-width: 730px;
-    font-family: "Inter";
-    font-weight: 400;
-    font-style: normal;
-    font-size: 50px;
-    line-height: 58px;
-    letter-spacing: -2px;
+  margin: 160px auto 151px;
+  display: flex;
+  max-width: 730px;
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+  line-height: 58px;
+  letter-spacing: -2px;
 }
 
 @media (max-width: 1279px) and (min-width: 768px) {
-    .promo__text {
-        max-width: 680px;
-        margin-top: 48%;
-        margin-bottom: 43.20%;
-        padding-left: 13%;
-        padding-right: 13%;
-        font-size: 40px;
-        line-height: 52px;
-        letter-spacing: -2px;
-    }
+  .promo__text {
+    max-width: 680px;
+    margin-top: 48%;
+    margin-bottom: 43.2%;
+    padding-left: 13%;
+    padding-right: 13%;
+    font-size: 40px;
+    line-height: 52px;
+    letter-spacing: -2px;
   }
+}
 
-  @media (max-width: 767px) and (min-width: 320px) {
-    .promo__text {
-        width: 100%;
-        margin-top: 75.4%;
-        margin-bottom: 70.20%;
-        font-size: 29px;
-        line-height: 37px;
-        letter-spacing: -0.7px;
-    }
+@media (max-width: 767px) and (min-width: 320px) {
+  .promo__text {
+    width: 100%;
+    margin-top: 75.4%;
+    margin-bottom: 70.2%;
+    font-size: 29px;
+    line-height: 37px;
+    letter-spacing: -0.7px;
   }
+}

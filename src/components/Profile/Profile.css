@@ -104,6 +104,10 @@ input::-moz-placeholder {
   background-color: inherit;
 }
 
+.profile__btn:hover {
+  opacity: 0.5;
+}
+
 @media (max-width: 1279px) and (min-width: 768px) {
   .profile__btn {
     margin-top: 25.6%

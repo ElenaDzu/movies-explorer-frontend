@@ -77,6 +77,10 @@
     border: none;
 }
 
+.moviescard__like:hover {
+  opacity: 0.5;
+}
+
 @media (max-width: 1279px) and (min-width: 768px) {
     .moviescard__like {
         margin-top: 19px;

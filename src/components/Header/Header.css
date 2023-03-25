@@ -20,6 +20,10 @@
   width: 38px;
 }
 
+.header__logo:hover {
+  opacity: 0.5;
+}
+
 .header__profile {
   margin-top: 11px;
   margin-left: 155px;
@@ -27,6 +31,11 @@
   height: 32px;
   object-fit: contain;
 }
+
+.profile__pic:hover {
+  opacity: 0.5;
+}
+
 .header__links-in {
   width: 1280px;
   margin: 0;
@@ -46,6 +55,10 @@
   font-size: 13px;
   line-height: 18px;
   align-items: center;
+}
+
+.header__link-in:hover {
+  opacity: .5;
 }
 
 .header__link-in:nth-child(2) {
@@ -83,6 +96,10 @@
   font-style: normal;
   font-size: 12px;
   line-height: 16px;
+}
+
+.header__link:hover {
+  opacity: 0.5;
 }
 
 .header__link:first-child {
@@ -250,6 +267,10 @@
     height: 43px;
   }
 
+  .header__burger:hover {
+    opacity: 0.5;
+  }
+
   .header__burger_opened {
     display: block;
   }
@@ -282,7 +303,6 @@
 
   .header__links-in_opened {
     display: block;
-
   }
 
   .header__link-in:nth-child(2) {
@@ -290,11 +310,13 @@
   }
   .header__link-in {
     margin: 0 auto;
-    margin-bottom: 24px;
+    margin-bottom: 29px;
     font-size: 18px;
     line-height: auto;
   }
-
+  .header__link-in:hover {
+    text-decoration: underline black 2px;
+  }
   .header__link-in:nth-last-child(2) {
     margin-right: auto;
   }
@@ -305,13 +327,16 @@
   }
 
   .profile__pic {
-    margin-top: 350px;
+    margin-top: 405px;
   }
 
   .close-menu_opened {
-    margin: 13px 13px 110px auto;
+    margin: 13px 22px 110px auto;
     width: 22px;
     height: 22px;
   }
 
+  .header__close-btn:hover {
+    opacity: 0.5;
+  }
 }

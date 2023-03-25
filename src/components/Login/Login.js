@@ -57,7 +57,7 @@ function Login({ handleLogin }) {
         </button>
         <div className="page__block">
           <p className="page__block">Еще не зарегистрированы?</p>
-          <a className="page__link" href="">
+          <a className="page__link" href="/sign-up">
             Регистрация
           </a>
         </div>

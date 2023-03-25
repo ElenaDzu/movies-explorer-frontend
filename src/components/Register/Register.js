@@ -5,7 +5,7 @@ import logoPath from "../../images/header-logom.svg";
 function Register() {
     return (
     <section className="page">
-      <a href="#">
+      <a href="/">
         <img
           className="page page__logo"
           src={logoPath}
@@ -52,7 +52,7 @@ function Register() {
         </button>
         <div className="page__block">
           <p className="page__block">Уже зарегистрированы?</p>
-          <a className="page__link" href="" >
+          <a className="page__link" href="sign-in" >
             Войти
           </a>
         </div>

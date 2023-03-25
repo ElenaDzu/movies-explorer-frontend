@@ -12,7 +12,7 @@ import Profile from "../Profile/Profile";
 
 function App() {
   let [userInfo, setUserInfo] = useState({
-    email: "qaz",
+    email: "",
   });
 
   function handleUserLogin(userData) {

@@ -98,6 +98,10 @@
   color: #000000;
 }
 
+.footer__link:hover {
+  opacity: 0.5;
+}
+
 @media (max-width: 1279px) and (min-width: 768px) {
   .footer__link {
     padding-right: 20px;

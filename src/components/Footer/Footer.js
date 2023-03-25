@@ -6,8 +6,8 @@ function Footer() {
             <p className="footer__project">Учебный проект Яндекс.Практикум х BeatFilm.</p>
             <div className="footer__links">
                 <p className="footer__date">&copy;2023</p>
-                <a className="footer__link" href="#">Яндекс.Практикум</a>
-                <a className="footer__link" href="#">Github</a>
+                <a className="footer__link" href="https://practicum.yandex.ru/">Яндекс.Практикум</a>
+                <a className="footer__link" href="https://github.com/">Github</a>
             </div>
     </footer>
     );

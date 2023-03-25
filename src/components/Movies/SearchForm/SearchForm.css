@@ -1,110 +1,108 @@
 .searchform {
- display: flex;
- flex-direction: row;
- margin: 0 auto;
- max-width: 1140px;
- width: 100%;
- flex-wrap: nowrap;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  max-width: 1140px;
+  width: 100%;
+  flex-wrap: nowrap;
 }
 
 .searchform__form {
-    display: flex;
-    height: 48px;
-    max-width: 1140px;
-    margin-bottom: 10px;
-    margin-top: 5.35%;
-    padding-bottom: 83px;
-    border-bottom: #AAAAAA 1px solid;
-    margin-left: auto;
-    margin-right: auto;
+  display: flex;
+  height: 48px;
+  max-width: 1140px;
+  margin-bottom: 10px;
+  margin-top: 5.35%;
+  padding-bottom: 83px;
+  border-bottom: #aaaaaa 1px solid;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (max-width: 1279px) and (min-width: 768px) {
-    .searchform__form {
-      width: 100%;
-      padding: 0;
-      margin-bottom: 9%;
-      flex-direction: column;
-      height: 96px;
-      margin-top: 6.3%;
-      padding-bottom: 8.3%;
-    }
+  .searchform__form {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 9%;
+    flex-direction: column;
+    height: 96px;
+    margin-top: 6.3%;
+    padding-bottom: 8.3%;
   }
+}
 
-  @media (max-width: 767px) and (min-width: 320px) {
-    .searchform__form{
-      padding: 0;
-      width: 100%;
-      flex-direction: column;
-      height: 156px;
-      margin-top: 14%;
-      padding-bottom: 0;
-    }
+@media (max-width: 767px) and (min-width: 320px) {
+  .searchform__form {
+    padding: 0;
+    width: 100%;
+    flex-direction: column;
+    height: 156px;
+    margin-top: 14%;
+    padding-bottom: 0;
   }
+}
 
 .searchform__inputform {
-    display: flex;
-    position: relative;
-    width: 932px;
+  display: flex;
+  position: relative;
+  width: 932px;
 }
 
 @media (max-width: 1279px) and (min-width: 768px) {
-    .searchform__inputform {
-      width: 708px;
-      margin: 0 auto 3.2%;
-    }
+  .searchform__inputform {
+    width: 708px;
+    margin: 0 auto 3.2%;
   }
+}
 
-  @media (max-width: 767px) and (min-width: 320px) {
-    .searchform__inputform {
-      width: 300px;
-      margin: 0 auto;
-      /* padding-left: 2%;
+@media (max-width: 767px) and (min-width: 320px) {
+  .searchform__inputform {
+    width: 300px;
+    margin: 0 auto;
+    /* padding-left: 2%;
       padding-right: 2%; */
-    }
   }
+}
 
 .searchform__input {
-    width: 100%;
-    max-width: 932px;
-    padding-left: 2.3%;
-    border: none;
-    border-radius: 30px;
-    border: #AAAAAA solid 1px;
-    font-family: "Inter";
-    font-weight: 400;
-    font-style:normal;
-    font-size: 14px;
-    line-height: 18px;
-    color: #A0A0A0;
-
+  width: 100%;
+  max-width: 932px;
+  padding-left: 2.3%;
+  border: none;
+  border-radius: 30px;
+  border: #aaaaaa solid 1px;
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #a0a0a0;
 }
 
 @media (max-width: 1279px) and (min-width: 768px) {
-    .searchform__input {
-      padding-top: 15px;
-      padding-bottom: 15px;
-
-    }
+  .searchform__input {
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
+}
 
-  @media (max-width: 767px) and (min-width: 320px) {
-    .searchform__input {
-      font-size: 11px;
-      line-height: 18px;
-      padding-top: 15px;
-      padding-bottom: 15px;
-      padding-left: 5%;
-    }
+@media (max-width: 767px) and (min-width: 320px) {
+  .searchform__input {
+    font-size: 11px;
+    line-height: 18px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 5%;
   }
+}
 
 .searchform__image {
-    width: 34px;
-    height: 34px;
-    border: none;
-    padding: 7px;
-    right: 0;
-    position: absolute;
+  width: 34px;
+  height: 34px;
+  border: none;
+  padding: 7px;
+  right: 0;
+  position: absolute;
 }
 
 .filtercheckbox {
@@ -113,31 +111,30 @@
   width: 167px;
   height: 48px;
   padding: 0;
-
 }
 
 @media (max-width: 1279px) and (min-width: 768px) {
-    .filtercheckbox {
-        margin: 0 auto;
-        width: 165px;
-    }
+  .filtercheckbox {
+    margin: 0 auto;
+    width: 165px;
   }
+}
 
-  @media (max-width: 767px) and (min-width: 320px) {
-    .filtercheckbox {
-        margin: 14% auto 4%;
-        height: 18px;
-    }
+@media (max-width: 767px) and (min-width: 320px) {
+  .filtercheckbox {
+    margin: 14% auto 4%;
+    height: 18px;
   }
+}
 
 .filtercheckbox__text {
-    padding: 0;
-    width: 117px;
-    font-family: "Inter";
-    font-weight: 400;
-    font-style:normal;
-    font-size: 13px;
-    line-height: 18px;
+  padding: 0;
+  width: 117px;
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 18px;
 }
 
 @media (max-width: 767px) and (min-width: 320px) {
@@ -148,13 +145,17 @@
 }
 
 .filtercheckbox__btn {
-    margin: auto 0 auto 14px;
-    padding: 0;
-    width: 36px;
-    height: 20px;
-    background-image: url("../../../images/filtercheckbox.svg");
-    border: none;
-    border-radius: 12px;
+  margin: auto 0 auto 14px;
+  padding: 0;
+  width: 36px;
+  height: 20px;
+  background-image: url("../../../images/filtercheckbox.svg");
+  border: none;
+  border-radius: 12px;
+}
+
+.filtercheckbox__btn:hover {
+  opacity: 0.5;
 }
 
 @media (max-width: 767px) and (min-width: 320px) {

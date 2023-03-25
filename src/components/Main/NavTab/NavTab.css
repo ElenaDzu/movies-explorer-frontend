@@ -43,6 +43,10 @@
   line-height: 16px;
 }
 
+.navtab__link:hover {
+  opacity: .5;
+}
+
 @media (max-width: 1279px) and (min-width: 768px) {
   .navtab__link {
     padding: 10px 0;

@@ -15,6 +15,10 @@
   margin: 70px auto 0 0;
 }
 
+.page__logo:hover {
+  opacity: 0.5;
+}
+
 @media (max-width: 1279px) and (min-width: 768px) {
   .page__logo {
     margin-top: 232px;
@@ -138,6 +142,10 @@
   color: #ffffff;
 }
 
+.page__btn:hover {
+  opacity: 0.5;
+}
+
 @media (max-width: 767px) and (min-width: 320px) {
   .page__btn {
     margin-top: 265px;
@@ -172,6 +180,10 @@
   margin-bottom: 70px;
 }
 
+.page__block:first-child:hover {
+  opacity: 0.3;
+}
+
 .page__link {
   display: flex;
   margin-left: 8px;
@@ -181,4 +193,8 @@
   font-weight: 400;
   font-style: normal;
   font-size: 14px;
+}
+
+.page__link:hover {
+  opacity: 0.3;
 }

@@ -1,13 +1,19 @@
 import { React } from "react";
 
 function NavTab() {
-    return (
-        <nav className="navtab">
-            <a className="navtab__link" href="/опроекте">О проекте</a>
-            <a className="navtab__link" href="/технологии">Технологии</a>
-            <a className="navtab__link" href="/технологии">Студент</a>
-        </nav>
-    );
+  return (
+    <nav className="navtab">
+      <a className="navtab__link" href="#aboutproject">
+        О проекте
+      </a>
+      <a className="navtab__link" href="#techs">
+        Технологии
+      </a>
+      <a className="navtab__link" href="#aboutme">
+        Студент
+      </a>
+    </nav>
+  );
 }
 
 export default NavTab;

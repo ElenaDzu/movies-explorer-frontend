@@ -66,7 +66,11 @@ function Header({ userInfo }) {
               Сохраненные фильмы
             </a>
             <a className="header__profile" href="/profile">
-              <img className="profile__pic" src={ProfilePath} alt="Логотип профайла" />
+              <img
+                className="profile__pic"
+                src={ProfilePath}
+                alt="Логотип профайла"
+              />
             </a>
           </nav>
           <div

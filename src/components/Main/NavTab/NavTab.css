@@ -44,7 +44,7 @@
 }
 
 .navtab__link:hover {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 @media (max-width: 1279px) and (min-width: 768px) {

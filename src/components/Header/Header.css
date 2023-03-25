@@ -58,7 +58,7 @@
 }
 
 .header__link-in:hover {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .header__link-in:nth-child(2) {

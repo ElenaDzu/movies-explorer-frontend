@@ -1,80 +1,80 @@
 .moviescard {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    max-width: 364px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 364px;
 }
 
 .moviescard__image {
-    width: 364px;
-    height: 203px;
-    border-radius: 10px 10px 0 0;
-    object-fit: cover;
+  width: 364px;
+  height: 203px;
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
 }
 
 @media (max-width: 1279px) and (min-width: 768px) {
-    .moviescard__image {
-        width: 339px;
-        height: 190px;
-    }
+  .moviescard__image {
+    width: 339px;
+    height: 190px;
   }
+}
 
-  @media (max-width: 767px) and (min-width: 320px) {
-    .moviescard__image {
-        width: 300px;
-        height: 168px;
-    }
+@media (max-width: 767px) and (min-width: 320px) {
+  .moviescard__image {
+    width: 300px;
+    height: 168px;
   }
+}
 
 .moviescard__block {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .moviescard__title {
-    margin: 17px;
-    padding: 0;
-    width: 80.3%;
-    font-family: "Inter";
-    font-weight: 400;
-    font-style:normal;
-    font-size: 13px;
-    line-height: 14px;
-    text-align:start;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
+  margin: 17px;
+  padding: 0;
+  width: 80.3%;
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 14px;
+  text-align: start;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 @media (max-width: 1279px) and (min-width: 768px) {
-    .moviescard__title  {
-        max-width: 260px;
-        margin-right: 25px;
-        margin-left: 14px; 
-    }
+  .moviescard__title {
+    max-width: 260px;
+    margin-right: 25px;
+    margin-left: 14px;
   }
+}
 
-  @media (max-width: 767px) and (min-width: 320px) {
-    .moviescard__title  {
-        max-width: 240px;
-        margin-right: 15px;
-        margin-left: 14px; 
-        font-size: 12px;
-        line-height: auto;
-        margin-top: 14px;
-        margin-bottom: 14px;
-    }
+@media (max-width: 767px) and (min-width: 320px) {
+  .moviescard__title {
+    max-width: 240px;
+    margin-right: 15px;
+    margin-left: 14px;
+    font-size: 12px;
+    line-height: auto;
+    margin-top: 14px;
+    margin-bottom: 14px;
   }
+}
 
 .moviescard__like {
-    margin: 22px 16px 2px 0;
-    padding: 10px 8px 8px;
-    width: 14px;
-    height: 12px;
-    background-repeat: no-repeat;
-    background-color: #FFFFFF;
-    background-image: url(../../../images/redlike.svg);
-    border: none;
+  margin: 22px 16px 2px 0;
+  padding: 10px 8px 8px;
+  width: 14px;
+  height: 12px;
+  background-repeat: no-repeat;
+  background-color: #ffffff;
+  background-image: url(../../../images/redlike.svg);
+  border: none;
 }
 
 .moviescard__like:hover {
@@ -82,39 +82,39 @@
 }
 
 @media (max-width: 1279px) and (min-width: 768px) {
-    .moviescard__like {
-        margin-top: 19px;
-        margin-left: 4px;
-    }
+  .moviescard__like {
+    margin-top: 19px;
+    margin-left: 4px;
   }
+}
 
-  @media (max-width: 767px) and (min-width: 320px) {
-    .moviescard__like {
-        margin-top: 17px;
-        margin-left: 4px;
-        padding-right: 3.5%;
-    }
+@media (max-width: 767px) and (min-width: 320px) {
+  .moviescard__like {
+    margin-top: 17px;
+    margin-left: 4px;
+    padding-right: 3.5%;
   }
+}
 
 .moviescard__duration {
-    margin: 0 auto 16px 16px;
-    font-family: "Inter";
-    font-weight: 400;
-    font-style:normal;
-    font-size: 13px;
-    line-height: auto;
-    text-align: start;
-    color: #A0A0A0;
+  margin: 0 auto 16px 16px;
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+  line-height: auto;
+  text-align: start;
+  color: #a0a0a0;
 }
 
 @media (max-width: 1279px) and (min-width: 768px) {
-    .moviescard__duration {
-       margin-bottom: 0;
-    }
+  .moviescard__duration {
+    margin-bottom: 0;
   }
+}
 
-  @media (max-width: 767px) and (min-width: 320px) {
-    .moviescard__duration {
-       margin-bottom: 0;
-    }
+@media (max-width: 767px) and (min-width: 320px) {
+  .moviescard__duration {
+    margin-bottom: 0;
   }
+}

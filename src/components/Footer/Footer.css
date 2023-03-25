@@ -35,7 +35,7 @@
 
 @media (max-width: 1279px) and (min-width: 768px) {
   .footer__project {
-    padding-top: 8%;
+    padding-top: 10%;
     max-width: 768px;
     width: 93%;
   }
@@ -43,9 +43,9 @@
 
 @media (max-width: 767px) and (min-width: 320px) {
   .footer__project {
+    padding-top: 15%;
     font-size: 12px;
-    padding-top: 59px;
-    padding-bottom: 22px;
+    padding-bottom: 6%;
     color: #a0a0a0;
   }
 }
@@ -61,7 +61,7 @@
 
 @media (max-width: 1279px) and (min-width: 768px) {
   .footer__links {
-    width: 100%;
+    width: calc(100% - 60px)
   }
 }
 
@@ -79,7 +79,6 @@
 
 @media (max-width: 1279px) and (min-width: 767px) {
   .footer__date {
-    padding-left: 3.69%;
     font-size: 13px;
   }
 }
@@ -100,12 +99,6 @@
 
 .footer__link:hover {
   opacity: 0.5;
-}
-
-@media (max-width: 1279px) and (min-width: 768px) {
-  .footer__link {
-    padding-right: 20px;
-  }
 }
 
 @media (max-width: 1279px) and (min-width: 768px) {

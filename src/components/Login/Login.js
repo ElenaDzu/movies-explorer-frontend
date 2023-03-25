@@ -22,8 +22,8 @@ function Login({ handleLogin }) {
 
   return (
     <section className="page">
-      <a href="/">
-        <img className="page page__logo" src={logoPath} alt="Логотип проекта" />
+      <a className="page__logo-login" href="/">
+        <img src={logoPath} alt="Логотип проекта" />
       </a>
       <h1 className="page__title">Рады видеть!</h1>
       <form className="page__form" onSubmit={handleSubmit}>
@@ -57,7 +57,7 @@ function Login({ handleLogin }) {
         </button>
         <div className="page__block">
           <p className="page__block">Еще не зарегистрированы?</p>
-          <a className="page__link" href="/sign-up">
+          <a className="page__link" href="/sign-in">
             Регистрация
           </a>
         </div>

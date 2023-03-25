@@ -13,7 +13,7 @@ import Profile from "../Profile/Profile";
 
 function App() {
   let [userInfo, setUserInfo] = useState({
-    email: "уберите меня", //чтобы выйти из аккаунта уберите фразу в кавычках
+    email: "", //чтобы вoйти из аккаунта напишите любой символ в кавычках
   });
 
   function handleUserLogin(userData) {

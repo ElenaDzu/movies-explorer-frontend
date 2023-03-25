@@ -14,7 +14,7 @@
 
 .header__logo {
   padding: 0;
-  margin: 18px 44px 0 10px;
+  margin: 18px 44px 0 0;
   display: flex;
   flex-direction: row;
   width: 38px;
@@ -79,7 +79,7 @@
 
 .header__links {
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto 16px;
   display: flex;
   justify-content: flex-end;
 }
@@ -88,7 +88,7 @@
   display: flex;
   justify-content: center;
   padding: 8px 20px;
-  margin: 5px 0 25px 0;
+  margin: 20px 0 25px 0;
   text-decoration: none;
   color: inherit;
   font-family: "Inter";
@@ -103,23 +103,21 @@
 }
 
 .header__link:first-child {
-  padding-right: 18px;
+  padding-right: 30px;
+}
+
+.header__link:nth-child(2) {
+  background-color: #2be080;
 }
 
 @media (max-width: 1279px) and (min-width: 768px) {
   .header {
-    max-width: 95.5%;
+    max-width: 92%;
   }
 
   .header__content {
     width: 100%;
-    max-width: 768px;
     display: flex;
-  }
-
-  .header__logo {
-    margin-left: 10px;
-    margin-bottom: 32px;
   }
 
   .header__link-in {
@@ -218,9 +216,10 @@
 
   .header__burger {
     display: block;
-    margin-left: 576px;
     background-color: white;
     border: none;
+    margin-top: 2.2%;
+    margin-left: 92%;
   }
 }
 
@@ -243,14 +242,17 @@
     width: 54px;
     font-size: 10px;
     padding: 6px 0 0;
-    margin: 9px 0 9px;
+    margin: 24px 0 9px;
     max-height: 20px;
     vertical-align: center;
   }
 
   .header__link:nth-child(2) {
     margin-right: 6px;
-    background-color: #2be080;
+  }
+
+  .header__link:first-child {
+    padding-right: 19px;
   }
 
   .header__links-in {
@@ -260,7 +262,7 @@
   .header__burger {
     display: block;
     margin-top: 15px;
-    margin-left: 160px;
+    margin-left: 75%;
     background-color: white;
     border: none;
     width: 40px;

@@ -34,7 +34,7 @@
 
 @media (max-width: 1279px) and (min-width: 768px) {
   .techs__subtitle {
-    max-width: 652px;
+    width: 87%;
     margin-top: 90px;
     padding-bottom: 23px;
   }
@@ -65,7 +65,7 @@
 @media (max-width: 1279px) and (min-width: 768px) {
   .techs__title {
     margin-top: 80px;
-    letter-spacing: -3px;
+    letter-spacing: -2px;
   }
 }
 

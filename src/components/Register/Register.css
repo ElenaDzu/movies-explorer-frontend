@@ -11,15 +11,22 @@
     width: 38px;
 }
 
+@media (max-width: 1279px) and (min-width: 768px) {
+    .page__logo {
+        padding-top: 58.5%;
+        margin-top: auto;
+    }
+  }
+
 @media (max-width: 767px) and (min-width: 320px) {
     .page__logo {
-        padding-top: 51px;
+        padding-top: 21.5%;
         margin-left: auto;
         margin-top: auto;
     }
   }
 
-.page__title {
+.page__title-reg {
     margin: 40px auto 0 0;
     font-family: "Inter";
     font-weight: 400;
@@ -29,7 +36,7 @@
 }
 
 @media (max-width: 767px) and (min-width: 320px) {
-    .page__title {
+    .page__title-reg {
         padding-top: 47px;
         margin-left: auto;
         margin-top: auto;

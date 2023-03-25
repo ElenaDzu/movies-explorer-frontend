@@ -38,7 +38,7 @@ function Header({ userInfo }) {
             <img
               alt="Логотип навигации"
               src={BurgerPath}
-              className="burger-pic"
+              className="burger__pic"
             />
           </button>
           <nav

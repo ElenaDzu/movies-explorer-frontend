@@ -42,7 +42,7 @@
   .aboutme__title {
     font-size: 30px;
     line-height: auto;
-    margin-top: 8%;
+    margin-top: 10%;
     margin-bottom: 0;
   }
 }
@@ -67,6 +67,10 @@
 @media (max-width: 1279px) and (min-width: 768px) {
   .aboutme__subtitle {
     margin-top: 90px;
+    width: 97%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 23px;
   }
 }
 
@@ -90,9 +94,18 @@
   justify-content: space-between;
 }
 
+@media (max-width: 1279px) and (min-width: 768px) {
+  .aboutme__card {
+    margin-left: auto;
+    margin-right: auto;
+    width: 97%;
+  }
+}
+
 @media (max-width: 767px) and (min-width: 320px) {
   .aboutme__card {
     flex-direction: column;
+    margin-top: 21%;
   }
 }
 

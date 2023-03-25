@@ -47,48 +47,48 @@ function MoviesCardList() {
             duration: "1ч 44м",
             _id: 4
         },
-        {
-            src: card5,
-            title: "Книготорговцы»",
-            duration: "1ч 37м",
-            _id: 5
-        },
-        {
-            src: card6,
-            title: "Когда я думаю о Германии ночью",
-            duration: "1ч 56м",
-            _id: 6
-        },
-        {
-            src: card8,
-            title: "Gimme Danger: История Игги и The Stooge...",
-            duration: "1ч 59м",
-            _id: 8
-        },
-        {
-            src: card9,
-            title: "Дженис: Маленькая девочка грустит",
-            duration: "1ч 42м",
-            _id: 9
-        },
-        {
-            src: card10,
-            title: "Соберись перед прыжком",
-            duration: "1ч 10м",
-            _id: 10
-        },
-        {
-            src: card11,
-            title: "Пи Джей Харви: A dog called money",
-            duration: "1ч 4м",
-            _id: 11
-        },
-        {
-            src: card12,
-            title: "По волнам: Искусство звука в кино",
-            duration: "1ч 7м",
-            _id: 12
-        }
+        // {
+        //     src: card5,
+        //     title: "Книготорговцы»",
+        //     duration: "1ч 37м",
+        //     _id: 5
+        // },
+        // {
+        //     src: card6,
+        //     title: "Когда я думаю о Германии ночью",
+        //     duration: "1ч 56м",
+        //     _id: 6
+        // },
+        // {
+        //     src: card8,
+        //     title: "Gimme Danger: История Игги и The Stooge...",
+        //     duration: "1ч 59м",
+        //     _id: 8
+        // },
+        // {
+        //     src: card9,
+        //     title: "Дженис: Маленькая девочка грустит",
+        //     duration: "1ч 42м",
+        //     _id: 9
+        // },
+        // {
+        //     src: card10,
+        //     title: "Соберись перед прыжком",
+        //     duration: "1ч 10м",
+        //     _id: 10
+        // },
+        // {
+        //     src: card11,
+        //     title: "Пи Джей Харви: A dog called money",
+        //     duration: "1ч 4м",
+        //     _id: 11
+        // },
+        // {
+        //     src: card12,
+        //     title: "По волнам: Искусство звука в кино",
+        //     duration: "1ч 7м",
+        //     _id: 12
+        // }
 
     ]
 

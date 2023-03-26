@@ -66,30 +66,42 @@
   }
 }
 
-.moviescard__like {
+.moviescard__btn {
   margin: 22px 16px 2px 0;
-  padding: 10px 8px 8px;
-  width: 14px;
-  height: 12px;
+  padding: 10px 8px 4px;
   background-repeat: no-repeat;
   background-color: #ffffff;
-  background-image: url(../../../images/redlike.svg);
+  background-position: center;
   border: none;
+  width: 14px;
+  height: 12px;
 }
 
-.moviescard__like:hover {
+.moviescard__btn_like {
+  background-image: url(../../../images/redlike.svg);
+}
+
+.moviescard__btn_unlike {
+  background-image: url(../../../images/unsaved.svg);
+}
+
+.moviescard__btn_delete {
+  background-image: url(../../../images/del-sav.svg);
+}
+
+.moviescard__btn:hover {
   opacity: 0.5;
 }
 
 @media (max-width: 1279px) and (min-width: 768px) {
-  .moviescard__like {
+  .moviescard__btn {
     margin-top: 19px;
     margin-left: 4px;
   }
 }
 
 @media (max-width: 767px) and (min-width: 320px) {
-  .moviescard__like {
+  .moviescard__btn {
     margin-top: 17px;
     margin-left: 4px;
     padding-right: 3.5%;

@@ -11,6 +11,11 @@
   width: 38px;
 }
 
+.page__logo:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
 @media (max-width: 1279px) and (min-width: 768px) {
   .page__logo {
     padding-top: 58.5%;
@@ -145,6 +150,7 @@
 
 .page__btn-reg:hover {
   opacity: 0.5;
+  cursor: pointer;
 }
 
 @media (max-width: 1279px) and (min-width: 768px) {

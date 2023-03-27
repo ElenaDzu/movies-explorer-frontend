@@ -4,7 +4,7 @@ import Image from "../../../images/student.svg";
 
 function AboutMe() {
   return (
-    <div className="aboutme" id="aboutme">
+    <section className="aboutme" id="aboutme">
       <h3 className="aboutme__subtitle">Студент</h3>
       <div className="aboutme__card">
         <img className="aboutme__image" src={Image} alt="фото студента"></img>
@@ -18,12 +18,12 @@ function AboutMe() {
             Контур». После того, как прошёл курс по веб-разработке, начал
             заниматься фриланс-заказами и ушёл с постоянной работы.
           </p>
-          <a href="https://github.com/ElenaDzu" className="aboutme__place">
+          <a href="https://github.com/ElenaDzu" className="aboutme__place" target="_blank" rel="noopener noreferrer">
             Github
           </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

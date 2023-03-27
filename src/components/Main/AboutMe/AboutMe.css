@@ -215,6 +215,7 @@
 
 .aboutme__place:hover {
   opacity: 0.5;
+  cursor: pointer;
 }
 
 @media (max-width: 1279px) and (min-width: 768px) {

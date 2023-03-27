@@ -8,14 +8,14 @@ import Techs from "./Techs/Tehcs";
 
 function Main() {
   return (
-    <div className="main">
+    <main className="main">
       <Promo></Promo>
       <NavTab></NavTab>
       <AboutProject></AboutProject>
       <Techs></Techs>
       <AboutMe></AboutMe>
       <Portfolio></Portfolio>
-    </div>
+    </main>
   );
 }
 

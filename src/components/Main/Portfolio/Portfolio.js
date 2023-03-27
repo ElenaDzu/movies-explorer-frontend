@@ -2,10 +2,17 @@ import { React } from "react";
 
 function Portfolio() {
   return (
-    <div className="portfolio">
+    <section className="portfolio">
       <h5 className="portfolio__name">Портфолио</h5>
       <nav className="portfolio__item">
-        Статичный сайт
+        <a
+          className="portfolio__item_link"
+          href="https://github.com/ElenaDzu/russian-travel"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Статичный сайт
+        </a>
         <a
           href="https://github.com/ElenaDzu/russian-travel"
           target="_blank"
@@ -16,7 +23,14 @@ function Portfolio() {
         </a>
       </nav>
       <nav className="portfolio__item">
-        Адаптивный сайт
+        <a
+          className="portfolio__item_link"
+          href="https://github.com/ElenaDzu/mesto-react"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Адаптивный сайт
+        </a>
         <a
           href="https://github.com/ElenaDzu/mesto-react"
           target="_blank"
@@ -27,7 +41,14 @@ function Portfolio() {
         </a>
       </nav>
       <nav className="portfolio__item">
-        Одностраничное приложение
+        <a
+          className="portfolio__item_link"
+          href="https://github.com/ElenaDzu/how-to-learn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Одностраничное приложение
+        </a>
         <a
           href="https://github.com/ElenaDzu/how-to-learn"
           target="_blank"
@@ -37,7 +58,7 @@ function Portfolio() {
           &#8599;
         </a>
       </nav>
-    </div>
+    </section>
   );
 }
 

@@ -1,0 +1,200 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 396px;
+  height: 100%;
+}
+
+.page__logo {
+  margin: 70px auto 0 0;
+  width: 38px;
+}
+
+.page__logo:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+@media (max-width: 1279px) and (min-width: 768px) {
+  .page__logo {
+    padding-top: 58.5%;
+    margin-top: auto;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+  .page__logo {
+    padding-top: 21.5%;
+    margin-left: auto;
+    margin-top: auto;
+  }
+}
+
+.page__title-reg {
+  margin: 40px auto 0 0;
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  line-height: auto;
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+  .page__title-reg {
+    padding-top: 47px;
+    margin-left: auto;
+    margin-top: auto;
+  }
+}
+
+.page__form-reg {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 23px auto 0 0;
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+  .page__form-reg {
+    margin-top: 60px;
+  }
+}
+
+.page__label-reg {
+  display: flex;
+  margin-left: 0;
+  color: #a0a0a0;
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 10px;
+  margin-top: 20px;
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+  .page__label-reg:last-of-type {
+    margin-top: 15px;
+  }
+
+  .page__label-reg:nth-child(3) {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 1279px) and (min-width: 768px) {
+  .page__form-reg {
+    margin-top: 23px;
+  }
+
+  .page__label-reg {
+    margin-top: 20px;
+  }
+
+  .page__label-reg:last-of-type {
+    margin-top: 20px;
+  }
+
+  .page__label-reg:nth-child(3) {
+    margin-top: 20px;
+  }
+}
+
+.page__text-reg {
+  display: flex;
+  width: 95%;
+  height: 46px;
+  margin: 10px auto 0;
+  padding-left: 15px;
+  background-color: #f9f9f9;
+  border: none;
+  border-radius: 10px;
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+  line-height: auto;
+}
+
+.page__input-errorreg {
+  display: flex;
+  margin-left: 0;
+  margin-top: 10px;
+  color: #ee3465;
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 10px;
+  line-height: auto;
+}
+
+@media (max-width: 1279px) and (min-width: 768px) {
+  .page__input-errorreg {
+    margin-top: 5px;
+  }
+}
+
+.page__btn-reg {
+  padding: 0;
+  margin-top: 16%;
+  padding: 13px 0 15px;
+  background-color: #2be080;
+  border: none;
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: auto;
+  color: #ffffff;
+}
+
+.page__btn-reg:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+@media (max-width: 1279px) and (min-width: 768px) {
+  .page__btn-reg {
+    margin-top: 69px;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+  .page__btn-reg {
+    margin-top: 160px;
+    font-size: 12px;
+  }
+}
+
+.page__block {
+  display: flex;
+  flex-direction: row;
+  margin-top: 16px;
+  justify-content: center;
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+  .page__block {
+    font-size: 12px;
+  }
+}
+
+.page__block:first-child {
+  margin-top: 0;
+  margin-bottom: 70px;
+}
+
+.page__link {
+  display: flex;
+  margin-left: 8px;
+  text-decoration: none;
+  color: #2be080;
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+}

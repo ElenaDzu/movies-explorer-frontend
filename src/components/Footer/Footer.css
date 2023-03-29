@@ -1,0 +1,121 @@
+.footer {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1280px;
+  height: 172px;
+  background-color: #fafafa;
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+  line-height: auto;
+}
+
+@media (max-width: 1279px) and (min-width: 768px) {
+  .footer {
+    width: 100%;
+    max-width: 768px;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+  .footer {
+    background-color: #ffffff;
+  }
+}
+
+.footer__project {
+  margin: 0 auto;
+  max-width: 1140px;
+  border-bottom: 1px solid #e8e8e8;
+  padding-top: 78px;
+  padding-bottom: 20px;
+  color: #a0a0a0;
+}
+
+@media (max-width: 1279px) and (min-width: 768px) {
+  .footer__project {
+    padding-top: 10%;
+    max-width: 768px;
+    width: 93%;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+  .footer__project {
+    padding-top: 15%;
+    font-size: 12px;
+    padding-bottom: 6%;
+    color: #a0a0a0;
+  }
+}
+
+.footer__links {
+  max-width: 1140px;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  padding: 22px 0;
+  align-items: center;
+}
+
+@media (max-width: 1279px) and (min-width: 768px) {
+  .footer__links {
+    width: calc(100% - 60px);
+  }
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+  .footer__links {
+    flex-direction: column;
+    font-size: 12px;
+    padding-top: 6.4%;
+  }
+}
+
+.footer__date {
+  margin: auto auto auto 0;
+}
+
+@media (max-width: 1279px) and (min-width: 767px) {
+  .footer__date {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+  .footer__date {
+    margin: 0 auto;
+    color: #a0a0a0;
+    order: 2;
+  }
+}
+
+.footer__link {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #000000;
+}
+
+.footer__link:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+@media (max-width: 1279px) and (min-width: 768px) {
+  .footer__link:first-of-type {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+  .footer__link {
+    margin: 13px auto 0;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+  .footer__link:last-of-type {
+    margin: 13px auto 29px;
+  }
+}

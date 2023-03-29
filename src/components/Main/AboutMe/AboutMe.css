@@ -1,0 +1,231 @@
+.aboutme {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  max-width: 1140px;
+  max-height: 100%;
+}
+
+@media (max-width: 1279px) and (min-width: 768px) {
+  .aboutme {
+    max-width: 89.5%;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+  .aboutme {
+    max-width: 91.25%;
+  }
+}
+
+.aboutme__title {
+  margin: 0 auto 18px 0;
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+  line-height: 58px;
+  letter-spacing: -2px;
+}
+
+@media (max-width: 1279px) and (min-width: 768px) {
+  .aboutme__title {
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+  .aboutme__title {
+    font-size: 30px;
+    line-height: auto;
+    margin-top: 10%;
+    margin-bottom: 0;
+  }
+}
+
+.aboutme__subtitle {
+  padding-bottom: 25px;
+  margin-top: 110px;
+  margin-bottom: 0;
+  display: flex;
+  max-width: 1140px;
+  text-align: left;
+  border-bottom: none;
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  line-height: auto;
+  letter-spacing: -1px;
+  border-bottom: 1px black solid;
+}
+
+@media (max-width: 1279px) and (min-width: 768px) {
+  .aboutme__subtitle {
+    margin-top: 90px;
+    width: 97%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 23px;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+  .aboutme__subtitle {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 46%;
+    font-size: 18px;
+    width: 100%;
+    padding-bottom: 28px;
+  }
+}
+
+.aboutme__card {
+  max-width: 1140px;
+  width: 100%;
+  margin-top: 66px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+@media (max-width: 1279px) and (min-width: 768px) {
+  .aboutme__card {
+    margin-left: auto;
+    margin-right: auto;
+    width: 97%;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+  .aboutme__card {
+    flex-direction: column;
+    margin-top: 21%;
+  }
+}
+
+.aboutme__prof {
+  margin: 0 auto 0 0;
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: left;
+}
+
+@media (max-width: 1279px) and (min-width: 768px) {
+  .aboutme__prof {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+  .aboutme__prof {
+    font-size: 11px;
+    line-height: 16px;
+    margin-top: 3%;
+  }
+}
+
+.aboutme__text {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  margin-left: 0;
+  max-width: 600px;
+}
+
+@media (max-width: 1279px) and (min-width: 768px) {
+  .aboutme__text {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.aboutme__description {
+  margin: 26px auto 0 0;
+  display: flex;
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+@media (max-width: 1279px) and (min-width: 768px) {
+  .aboutme__description {
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 20px;
+    padding-right: 50px;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+  .aboutme__description {
+    font-size: 11px;
+    line-height: 16px;
+    margin-top: 6.4%;
+  }
+}
+
+.aboutme__image {
+  display: flex;
+  margin-right: 0;
+  background-repeat: no-repeat;
+  width: 270px;
+  height: 327px;
+  border-radius: 10px 10px 10px 10px;
+}
+
+@media (max-width: 1279px) and (min-width: 768px) {
+  .aboutme__image {
+    width: 255px;
+    height: 307px;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+  .aboutme__image {
+    width: 292px;
+    height: 352px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.aboutme__place {
+  margin-top: 99px;
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: auto;
+  text-align: start;
+  text-decoration: none;
+  color: #000000;
+}
+
+.aboutme__place:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+@media (max-width: 1279px) and (min-width: 768px) {
+  .aboutme__place {
+    margin-top: 87px;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+  .aboutme__place {
+    margin-top: 14.55%;
+  }
+}

@@ -15,7 +15,7 @@ function SearchForm({ handleClickCheckbox, handleClickSearch }) {
 
   const onChange = (e) => {
     if (!e.target.value) {
-      setError(SearchError.key_word);
+      setError(SearchError.KEY_WORD);
       return;
     }
     setError("");

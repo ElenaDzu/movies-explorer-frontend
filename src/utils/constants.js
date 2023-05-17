@@ -1,9 +1,9 @@
 
 export const SearchError = {
-  key_word: "Введите ключевое слово",
-  not_saved: "У вас нет сохранённых фильмов",
-  search_error: "Произошла ошибка, попробуйте обновить страницу.",
-  not_found: "Ничего не найдено",
+  KEY_WORD: "Введите ключевое слово",
+  NOT_SAVED: "У вас нет сохранённых фильмов",
+  SEARCH_ERROR: "Произошла ошибка, попробуйте обновить страницу.",
+  NOT_FOUND: "Ничего не найдено",
 };
 
 export const StatusError = {
@@ -26,13 +26,13 @@ export const VALIDATOR = {
   },
 };
 
-export const Numbercards = {
+export const NUMBERCARDS = {
   mobile: 5,
   tablet: 8,
   desktop: 12,
 };
 
-export const Typescreen = {
+export const TYPESCREEN = {
   mobile: 480,
   tablet: 768,
   desktop: 1280,

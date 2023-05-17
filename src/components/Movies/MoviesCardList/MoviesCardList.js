@@ -2,7 +2,7 @@ import { React, useState, useEffect, useContext } from "react";
 import { useLocation } from "react-router-dom";
 import CurrentUserContext from "../../../contexts/CurrentUserContext";
 import MoviesCard from "../MoviesCard/MoviesCard";
-import { Numbercards, Typescreen } from "../../../utils/constants";
+import { NUMBERCARDS, TYPESCREEN } from "../../../utils/constants";
 
 function MoviesCardList({ movies, onError }) {
   const { savedMovies } = useContext(CurrentUserContext);
@@ -21,12 +21,12 @@ function MoviesCardList({ movies, onError }) {
   }, []);
 
   useEffect(() => {
-    if (screenWidth <= Typescreen.mobile) {
-      setSizeLength(Numbercards.mobile);
-    } else if (screenWidth <= Typescreen.tablet) {
-      setSizeLength(Numbercards.tablet);
+    if (screenWidth <= TYPESCREEN.mobile) {
+      setSizeLength(NUMBERCARDS.mobile);
+    } else if (screenWidth <= TYPESCREEN.tablet) {
+      setSizeLength(NUMBERCARDS.tablet);
     } else {
-      setSizeLength(Numbercards.desktop);
+      setSizeLength(NUMBERCARDS.desktop);
     }
   }, [screenWidth, movies.length]);
 
@@ -40,7 +40,7 @@ function MoviesCardList({ movies, onError }) {
 
   const onMoreBtnClick = () => {
     setSizeLength((current) => {
-      if (screenWidth <= Typescreen.tablet) {
+      if (screenWidth <= TYPESCREEN.tablet) {
         return current + 2;
       }
       return current + 3;

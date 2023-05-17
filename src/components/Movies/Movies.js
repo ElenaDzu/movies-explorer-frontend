@@ -44,7 +44,7 @@ function Movies() {
         })
         .catch(() => {
           handleFilterResult([]);
-          setErrorMessage(SearchError.search_error);
+          setErrorMessage(SearchError.SEARCH_ERROR);
         })
         .finally(() => setIsLoading(false));
     } else {
@@ -59,7 +59,7 @@ function Movies() {
     setSearchedFilms(movies);
     localStorage.setItem("storageSearchedResult", JSON.stringify(movies));
     movies.length === 0
-      ? setErrorMessage(SearchError.not_found)
+      ? setErrorMessage(SearchError.NOT_FOUND)
       : setErrorMessage("");
   };
 
@@ -78,10 +78,10 @@ function Movies() {
 
   const renderFilmsArray = () => {
     if (errorMessage) {
-      return <p className="movies__search-message">{SearchError.not_found}</p>;
+      return <p className="movies__search-message">{SearchError.NOT_FOUND}</p>;
     } else if (errorMessage.err) {
       return (
-        <p className="movies__search-message">{SearchError.search_error}</p>
+        <p className="movies__search-message">{SearchError.SEARCH_ERROR}</p>
       );
     }
     return <MoviesCardList movies={searchedFilms} />;

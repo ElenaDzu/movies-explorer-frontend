@@ -15,10 +15,10 @@ const SavedMovies = ({ onError }) => {
   const getFilteredFilms = (keyWord, isShort) => {
     const filteredFilms = filterFilms(savedMovies, keyWord, isShort);
     filteredFilms.length === 0
-      ? setErrorMessage(SearchError.not_found)
+      ? setErrorMessage(SearchError.NOT_FOUND)
       : setErrorMessage("");
     !savedMovies.length
-      ? setErrorMessage(SearchError.not_saved)
+      ? setErrorMessage(SearchError.NOT_SAVED)
       : setErrorMessage("");
     setMovies(filteredFilms);
   };
@@ -27,7 +27,7 @@ const SavedMovies = ({ onError }) => {
     setMovies(savedMovies);
     getFilteredFilms(searchFeatures.keyWord, searchFeatures.isShort);
     !savedMovies.length
-      ? setErrorMessage(SearchError.not_saved)
+      ? setErrorMessage(SearchError.NOT_SAVED)
       : setErrorMessage("");
   }, [savedMovies]);
 

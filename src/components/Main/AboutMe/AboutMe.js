@@ -1,6 +1,5 @@
 import { React } from "react";
 import Image from "../../../images/student.svg";
-//import { Route, Switch } from "react-router-dom";
 
 function AboutMe() {
   return (
@@ -18,7 +17,12 @@ function AboutMe() {
             Контур». После того, как прошёл курс по веб-разработке, начал
             заниматься фриланс-заказами и ушёл с постоянной работы.
           </p>
-          <a href="https://github.com/ElenaDzu" className="aboutme__place" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://github.com/ElenaDzu"
+            className="aboutme__place"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Github
           </a>
         </div>

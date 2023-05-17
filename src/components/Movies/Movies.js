@@ -1,15 +1,100 @@
-import { React } from "react";
-import MoviesCardList from "../Movies/MoviesCardList/MoviesCardList";
-//import Preloader from "./Preloader/Preloader";
+import { useState, useEffect } from "react";
+import MoviesCardList from "./MoviesCardList/MoviesCardList";
 import SearchForm from "./SearchForm/SearchForm";
+import { getMovies } from "../../utils/MoviesApi";
+import { SearchError, standardizeFilms, filterFilms } from "../../utils/constants";
+import Preloader from "./Preloader/Preloader";
 
 function Movies() {
+  const [searchedFilms, setSearchedFilms] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+  const [keyWord, setKeyWord] = useState("");
+  const [isShortFilms, setIsShortFilms] = useState(false);
+
+  const storageAllFilms =
+    JSON.parse(localStorage.getItem("storageAllFilms")) || [];
+
+  useEffect(() => {
+    const storageSearchedResult =
+      JSON.parse(localStorage.getItem("storageSearchedResult")) || [];
+    const storageKeyWord = localStorage.getItem("storageKeyWord") || "";
+    const storageIsShort =
+      JSON.parse(localStorage.getItem("storageIsShort")) || false;
+
+    storageSearchedResult && setSearchedFilms(storageSearchedResult);
+    storageKeyWord && setKeyWord(storageKeyWord);
+    storageIsShort && setIsShortFilms(storageIsShort);
+  }, []);
+
+  const getFilteredFilms = (keyWord, isShortFilms) => {
+    if (!storageAllFilms.length) {
+      setIsLoading(true);
+      getMovies()
+        .then((allMovies) => {
+          const standardizedFilms = standardizeFilms(allMovies);
+          localStorage.setItem(
+            "storageAllFilms",
+            JSON.stringify(standardizedFilms)
+          );
+          const filteredFilms = keyWord
+            ? filterFilms(standardizedFilms, keyWord, isShortFilms)
+            : [];
+          handleFilterResult(filteredFilms);
+        })
+        .catch(() => {
+          handleFilterResult([]);
+          setErrorMessage(SearchError.search_error);
+        })
+        .finally(() => setIsLoading(false));
+    } else {
+      const filteredFilms = keyWord
+        ? filterFilms(storageAllFilms, keyWord, isShortFilms)
+        : [];
+      handleFilterResult(filteredFilms);
+    }
+  };
+
+  const handleFilterResult = (movies) => {
+    setSearchedFilms(movies);
+    localStorage.setItem("storageSearchedResult", JSON.stringify(movies));
+    movies.length === 0
+      ? setErrorMessage(SearchError.not_found)
+      : setErrorMessage("");
+  };
+
+  const handleClickSearch = (keyWord) => {
+    if (keyWord == "") return;
+    setKeyWord(keyWord);
+    localStorage.setItem("storageKeyWord", keyWord);
+    getFilteredFilms(keyWord, isShortFilms);
+  };
+
+  const handleClickCheckbox = (isChecked) => {
+    setIsShortFilms(isChecked);
+    localStorage.setItem("storageIsShort", isChecked);
+    getFilteredFilms(keyWord, isChecked);
+  };
+
+  const renderFilmsArray = () => {
+    if (errorMessage) {
+      return <p className="movies__search-message">{SearchError.not_found}</p>;
+    } else if (errorMessage.err) {
+      return (
+        <p className="movies__search-message">{SearchError.search_error}</p>
+      );
+    }
+    return <MoviesCardList movies={searchedFilms} />;
+  };
+
   return (
-    <div className="movies">
-      <SearchForm></SearchForm>
-      <MoviesCardList></MoviesCardList>
-      {/* <Preloader></Preloader> */}
-    </div>
+    <main>
+      <SearchForm
+        handleClickSearch={handleClickSearch}
+        handleClickCheckbox={handleClickCheckbox}
+      />
+      {isLoading ? <Preloader /> : renderFilmsArray()}
+    </main>
   );
 }
 

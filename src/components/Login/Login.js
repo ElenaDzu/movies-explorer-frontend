@@ -1,23 +1,13 @@
-import { React, useState } from "react";
+import useFormValidator from "../../hooks/useFormValidator";
+import { VALIDATOR } from "../../utils/constants";
 import logoPath from "../../images/header-logom.svg";
 
-function Login({ handleLogin }) {
-  const [loginData, setLoginData] = useState({
-    email: "",
-    password: "",
-  });
+const Login = ({ isProcessing, onLogin }) => {
+  const { values, errors, isCorrect, handleChange } = useFormValidator();
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setLoginData({
-      ...loginData,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    handleLogin(loginData);
+  const handleSubmit = (evt) => {
+    evt.preventDefault();
+    onLogin(values);
   };
 
   return (
@@ -26,32 +16,44 @@ function Login({ handleLogin }) {
         <img src={logoPath} alt="Логотип проекта" />
       </a>
       <h1 className="page__title">Рады видеть!</h1>
-      <form className="page__form" onSubmit={handleSubmit}>
-        <label for="name" className="page__label">
+      <form
+        className="page__form"
+        onSubmit={handleSubmit}
+      >
+        <label htmlFor="name" className="page__label">
           E-mail
         </label>
         <input
           required
           name="email"
+          id="email"
+          minLength='6'
+          maxLength='40'
           className="page__text"
           type="email"
           placeholder="E-mail"
           onChange={handleChange}
-          value={loginData.email}
+          value={values.email || " "}
+          disabled={isProcessing}
+          pattern={VALIDATOR.email.regex}
         />
-        <label for="name" className="page__label">
+        <span className="page__input-error" id="email-error">{errors.email}</span>
+        <label htmlFor="name" className="page__label">
           Пароль
         </label>
         <input
           required
           className="page__text"
           type="password"
-          placeholder="Пароль"
+          id="password"
           onChange={handleChange}
-          value={loginData.password}
+          placeholder="Пароль"
+          value={values.password || " "}
           name="password"
+          disabled={isProcessing}
         />
-        <button type="submit" className="page__btn">
+        <span className="page__input-error" id="password-error">{errors.password}</span>
+        <button type="submit" className="page__btn" disabled={!isCorrect}>
           Войти
         </button>
         <div className="page__block">
@@ -63,6 +65,6 @@ function Login({ handleLogin }) {
       </form>
     </section>
   );
-}
+};
 
 export default Login;

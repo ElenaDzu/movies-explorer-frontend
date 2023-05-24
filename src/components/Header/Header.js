@@ -1,9 +1,12 @@
-import { React, useState } from "react";
+import { React, useContext, useState } from "react";
 import logoPath from "../../images/header-logom.svg";
 import ProfilePath from "../../images/profile.svg";
 import BurgerPath from "../../images/burger.svg";
 import CloseMenuPath from "../../images/close-btn.svg";
-function Header({ userInfo }) {
+import CurrentUserContext from "../../contexts/CurrentUserContext";
+
+function Header({ loggedIn }) {
+  const {currentUser} = useContext(CurrentUserContext);
   const [isOpen, setIsOpen] = useState(false);
   const showMenu = () => {
     setIsOpen(true);
@@ -18,7 +21,7 @@ function Header({ userInfo }) {
       <a href="/">
         <img className="header__logo" src={logoPath} alt="Логотип проекта" />
       </a>
-      {userInfo && userInfo.email === "" ? (
+      {!loggedIn ? (
         <nav className="header__links">
           <a className="header__link" href="/sign-up">
             Регистрация

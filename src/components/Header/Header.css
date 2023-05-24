@@ -244,7 +244,7 @@
   }
 
   .header__link-in {
-    width: 340px;
+    max-width: 340px;
     margin-top: 0px;
     margin-bottom: 27px;
     padding-bottom: 4px;
@@ -266,6 +266,7 @@
 
   .header__link-in:nth-child(2) {
     display: block;
+    text-align: center;
   }
 
   .header__profile {
@@ -366,6 +367,7 @@
 
   .header__link-in:nth-child(2) {
     display: block;
+    text-align: center;
   }
   .header__link-in {
     margin: 0 auto;

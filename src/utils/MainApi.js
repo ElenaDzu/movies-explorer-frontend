@@ -1,4 +1,4 @@
-export const BASE_URL = "http://api.elenadziuba.nomoredomains.work";
+export const BASE_URL = "https://api.elenadziuba.nomoredomains.work";
 
 const headers = {
   Accept: "application/json",

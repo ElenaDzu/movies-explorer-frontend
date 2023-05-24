@@ -33,7 +33,7 @@ const Login = ({ isProcessing, onLogin }) => {
           type="email"
           placeholder="E-mail"
           onChange={handleChange}
-          value={values.email || " "}
+          value={values.email || ""}
           disabled={isProcessing}
           pattern={VALIDATOR.email.regex}
         />

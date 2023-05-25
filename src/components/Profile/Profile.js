@@ -11,7 +11,6 @@ const Profile = ({ onLogout, onError }) => {
     name: currentUser.name,
     email: currentUser.email,
   };
-  const inputRef = useRef(false);
   const { values, isCorrect, handleChange, resetForm } = useFormValidator();
 
   const [isProcessing, setIsProcessing] = useState(false);
@@ -19,8 +18,7 @@ const Profile = ({ onLogout, onError }) => {
 
   async function handleEdit(evt) {
     evt.preventDefault();
-    setIsChange(true);
-    inputRef.current.focus();
+    await setIsChange(true);
   }
 
   const handleSubmit = async (evt) => {
@@ -71,11 +69,10 @@ const Profile = ({ onLogout, onError }) => {
             type="text"
             name="name"
             id="name"
-            ref={inputRef}
             minLength="2"
             maxLength="30"
             pattern={VALIDATOR.name.regex}
-            value={currentUser.name || ""}
+            value={values.name || currentUser.name}
             onChange={handleChange}
             disabled={isProcessing || !isChange}
           />
@@ -92,7 +89,7 @@ const Profile = ({ onLogout, onError }) => {
             minLength="2"
             maxLength="30"
             pattern={VALIDATOR.email.regex}
-            value={currentUser.email || ""}
+            value={values.email || currentUser.email}
             onChange={handleChange}
             disabled={isProcessing || !isChange}
           />

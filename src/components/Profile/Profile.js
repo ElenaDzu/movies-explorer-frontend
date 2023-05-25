@@ -17,7 +17,7 @@ const Profile = ({ onLogout, onError }) => {
   const [isProcessing, setIsProcessing] = useState(false);
   const [isChange, setIsChange] = useState(false);
 
-  function handleEdit(evt) {
+  async function handleEdit(evt) {
     evt.preventDefault();
     setIsChange(true);
     inputRef.current.focus();

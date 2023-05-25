@@ -6,11 +6,10 @@ import { VALIDATOR } from "../../utils/constants";
 import Preloader from "../Movies/Preloader/Preloader";
 
 const Profile = ({ onLogout, onError }) => {
-  const userContext = useContext(CurrentUserContext);
-  const [userData, setUserData] = useState(userContext.currentUser);
+  const { currentUser, setCurrentUser } = useContext(CurrentUserContext);
   const initValues = {
-    name: userData.name,
-    email: userData.email,
+    name: currentUser.name,
+    email: currentUser.email,
   };
   const inputRef = useRef(false);
   const { values, isCorrect, handleChange, resetForm } = useFormValidator({
@@ -20,16 +19,16 @@ const Profile = ({ onLogout, onError }) => {
   const [isProcessing, setIsProcessing] = useState(false);
   const [isChange, setIsChange] = useState(false);
 
-  async function handleEdit(evt) {
+  function handleEdit(evt) {
     evt.preventDefault();
-    await setIsChange(true);
+    setIsChange(true);
     inputRef.current.focus();
   }
 
   const handleSubmit = async (evt) => {
     evt.preventDefault();
     setIsProcessing(true);
-    setUserData({
+    setCurrentUser({
       name: values.name,
       email: values.email,
     });
@@ -59,7 +58,7 @@ const Profile = ({ onLogout, onError }) => {
 
   return (
     <section className="profile">
-      <h1 className="profile__title">{`Привет, ${userData.name}!`}</h1>
+      <h1 className="profile__title">{`Привет, ${currentUser.name}!`}</h1>
       <form
         className="profile__block"
         name={`form-profile`}
@@ -78,7 +77,7 @@ const Profile = ({ onLogout, onError }) => {
             minLength="2"
             maxLength="30"
             pattern={VALIDATOR.name.regex}
-            value={values.name || ""}
+            value={currentUser.name || ""}
             onChange={handleChange}
             disabled={isProcessing || !isChange}
           />
@@ -95,7 +94,7 @@ const Profile = ({ onLogout, onError }) => {
             minLength="2"
             maxLength="30"
             pattern={VALIDATOR.email.regex}
-            value={values.email || ""}
+            value={currentUser.email || ""}
             onChange={handleChange}
             disabled={isProcessing || !isChange}
           />

@@ -10,7 +10,7 @@ function SearchForm({ handleClickCheckbox, handleClickSearch }) {
   const [error, setError] = useState("");
 
   const [isShort, setIsShort] = useState(
-    localStorage.getItem("storageIsShort") == "true"
+    localStorage.getItem("storageIsShort") === "true"
   );
 
   const onChange = (e) => {

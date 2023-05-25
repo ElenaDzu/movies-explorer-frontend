@@ -12,9 +12,7 @@ const Profile = ({ onLogout, onError }) => {
     email: currentUser.email,
   };
   const inputRef = useRef(false);
-  const { values, isCorrect, handleChange, resetForm } = useFormValidator({
-    initValues,
-  });
+  const { values, isCorrect, handleChange, resetForm } = useFormValidator();
 
   const [isProcessing, setIsProcessing] = useState(false);
   const [isChange, setIsChange] = useState(false);

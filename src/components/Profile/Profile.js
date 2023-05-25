@@ -6,14 +6,13 @@ import { VALIDATOR } from "../../utils/constants";
 import Preloader from "../Movies/Preloader/Preloader";
 
 const Profile = ({ onLogout, onError }) => {
-  const userContext = useContext(CurrentUserContext);
+  const { userContext } = useContext(CurrentUserContext);
   const [userData, setUserData] = useState(userContext.currentUser);
-
+  console.log(userData);
   const initValues = {
     name: userData.name,
     email: userData.email,
   };
-
   const inputRef = useRef(false);
   const { values, isCorrect, handleChange, resetForm } = useFormValidator({
     initValues,

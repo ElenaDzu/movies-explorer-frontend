@@ -56,7 +56,12 @@ const Profile = ({ onLogout, onError }) => {
   ) {
     isButtonActive = true;
   }
+  console.log(values.name);
   console.log(initValues.name);
+
+  console.log(values.email);
+  console.log(initValues.email);
+
   return (
     <section className="profile">
       <h1 className="profile__title">{`Привет, ${currentUser.name}!`}</h1>

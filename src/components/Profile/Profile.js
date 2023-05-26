@@ -74,7 +74,7 @@ const Profile = ({ onLogout, onError }) => {
             pattern={VALIDATOR.name.regex}
             value={values.name || currentUser.name}
             onChange={handleChange}
-            disabled={isProcessing || !isChange}
+            disabled={isProcessing || isChange}
           />
         </div>
         <div className="profile__line">
@@ -91,7 +91,7 @@ const Profile = ({ onLogout, onError }) => {
             pattern={VALIDATOR.email.regex}
             value={values.email || currentUser.email}
             onChange={handleChange}
-            disabled={isProcessing || !isChange}
+            disabled={isProcessing || isChange}
           />
         </div>
         {isProcessing ? <Preloader /> : ""}

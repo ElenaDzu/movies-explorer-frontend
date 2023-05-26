@@ -117,7 +117,7 @@
 }
 
 .page__text-reg:focus {
-  outline: solid 2px #afacac;
+  outline: solid 1px #afacac;
   outline-offset: 0;
 }
 

@@ -117,7 +117,7 @@
 }
 
 .page__text-reg:focus {
-  border: #a0a0a0 solid 3px;
+  border-color: #a0a0a0;
 }
 
 .page__input-errorreg {

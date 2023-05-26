@@ -48,7 +48,7 @@
 }
 
 .profile__text:focus {
-  border: #a0a0a0 solid 3px;
+  border-color: #a0a0a0;
 }
 
 .profile__text_small {
@@ -105,11 +105,13 @@
   text-align: center;
   border: none;
   cursor: pointer;
+  background-color: white;
 }
 
 .profile__submit-btn:hover {
   opacity: 0.8;
   font-size: 16px;
+  cursor: pointer;
 }
 
 .profile__submit-btn:disabled {

@@ -84,6 +84,10 @@
   color: #a0a0a0;
 }
 
+.searchform__input:focus {
+  border: #7e7c7c solid 3px;
+}
+
 @media (max-width: 1279px) and (min-width: 768px) {
   .searchform__input {
     padding-top: 15px;

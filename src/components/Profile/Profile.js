@@ -46,7 +46,7 @@ const Profile = ({ onLogout, onError }) => {
       setIsProcessing(false);
     }
   };
-
+  
   let isButtonActive = false;
   if (isCorrect && !isProcessing && (values.username !== initValues.username || values.email !== initValues.email)) {
   isButtonActive = true;
@@ -99,7 +99,7 @@ const Profile = ({ onLogout, onError }) => {
           <button
             type="submit"
             className="profile__submit-btn"
-            disabled={isButtonActive}
+            disabled={!isButtonActive}
           >
             Сохранить
           </button>

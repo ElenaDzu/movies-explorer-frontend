@@ -106,7 +106,7 @@
   height: 46px;
   margin: 10px auto 0;
   padding-left: 15px;
-  background-color: red;
+  background-color: #cac5c5;
   border: none;
   border-radius: 10px;
   font-family: "Inter";
@@ -117,7 +117,7 @@
 }
 
 .page__text-reg:focus {
-  outline: 0;
+  outline: solid 2px #afacac;
   outline-offset: 0;
 }
 

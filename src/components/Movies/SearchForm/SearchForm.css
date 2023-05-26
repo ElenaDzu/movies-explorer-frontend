@@ -85,7 +85,8 @@
 }
 
 .searchform__input:focus {
-  border-color: #aaaaaa;
+  outline: solid 2px #afacac;
+  outline-offset: 0;
 }
 
 @media (max-width: 1279px) and (min-width: 768px) {
@@ -187,7 +188,6 @@
 
 .filtercheckbox__btn + .filtercheckbox__switch::before {
  cursor: pointer;
- opacity: 0.5;
 }
 
 .filtercheckbox__btn:checked + .filtercheckbox__switch::before {

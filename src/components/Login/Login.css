@@ -118,7 +118,8 @@
 }
 
 .page__text:focus {
-  border: none;
+  outline: solid 2px #afacac;
+  outline-offset: 0;
 }
 
 @media (max-width: 1279px) and (min-width: 768px) {

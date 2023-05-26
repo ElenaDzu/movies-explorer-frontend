@@ -106,7 +106,7 @@
   height: 46px;
   margin: 10px auto 0;
   padding-left: 15px;
-  background-color: #f9f9f9;
+  background-color: red;
   border: none;
   border-radius: 10px;
   font-family: "Inter";
@@ -116,7 +116,7 @@
   line-height: auto;
 }
 
-.page__text-reg:active {
+.page__text-reg:focus {
   outline: 0;
   outline-offset: 0;
 }

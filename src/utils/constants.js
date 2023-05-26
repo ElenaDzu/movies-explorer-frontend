@@ -29,7 +29,7 @@ export const NUMBERCARDS = {
 
 export const TYPESCREEN = {
   mobile: 480,
-  tablet: 768,
+  tablet: 1279,
   desktop: 1280,
 };
 

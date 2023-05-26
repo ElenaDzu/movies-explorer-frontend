@@ -6,7 +6,8 @@ import { VALIDATOR } from "../../utils/constants";
 import Preloader from "../Movies/Preloader/Preloader";
 
 const Profile = ({ onLogout, onError }) => {
-  const { currentUser, setCurrentUser } = useContext(CurrentUserContext);
+  const userContext = useContext(CurrentUserContext);
+  const [currentUser, setCurrentUser] = useState(userContext.currentUser);
   const initValues = {
     name: currentUser.name,
     email: currentUser.email,
@@ -72,7 +73,7 @@ const Profile = ({ onLogout, onError }) => {
             minLength="2"
             maxLength="30"
             pattern={VALIDATOR.name.regex}
-            value={values.name || ""}
+            value={values.name || currentUser.name}
             onChange={handleChange}
             disabled={isProcessing || !isChange}
           />
@@ -89,7 +90,7 @@ const Profile = ({ onLogout, onError }) => {
             minLength="2"
             maxLength="30"
             pattern={VALIDATOR.email.regex}
-            value={values.email || ""}
+            value={values.email || currentUser.email}
             onChange={handleChange}
             disabled={isProcessing || !isChange}
           />

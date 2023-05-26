@@ -46,12 +46,17 @@ const Profile = ({ onLogout, onError }) => {
       setIsProcessing(false);
     }
   };
-  
-  let isButtonActive = false;
-  if (isCorrect && !isProcessing && (values.username !== initValues.username || values.email !== initValues.email)) {
-  isButtonActive = true;
-  };
 
+  let isButtonActive = false;
+  if (
+    isCorrect &&
+    !isProcessing &&
+    (values.username !== initValues.username ||
+      values.email !== initValues.email)
+  ) {
+    isButtonActive = true;
+  }
+  console.log(initValues.username);
   return (
     <section className="profile">
       <h1 className="profile__title">{`Привет, ${currentUser.name}!`}</h1>
@@ -74,7 +79,7 @@ const Profile = ({ onLogout, onError }) => {
             pattern={VALIDATOR.name.regex}
             value={values.name || currentUser.name}
             onChange={handleChange}
-            disabled={isProcessing || isChange}
+            disabled={isProcessing || !isChange}
           />
         </div>
         <div className="profile__line">
@@ -91,7 +96,7 @@ const Profile = ({ onLogout, onError }) => {
             pattern={VALIDATOR.email.regex}
             value={values.email || currentUser.email}
             onChange={handleChange}
-            disabled={isProcessing || isChange}
+            disabled={isProcessing || !isChange}
           />
         </div>
         {isProcessing ? <Preloader /> : ""}

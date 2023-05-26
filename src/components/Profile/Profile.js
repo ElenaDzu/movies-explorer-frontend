@@ -11,7 +11,7 @@ const Profile = ({ onLogout, onError }) => {
     name: currentUser.name,
     email: currentUser.email,
   };
-  const { values, isCorrect, handleChange, resetForm } = useFormValidator({ initValues });
+  const { values, isCorrect, handleChange, resetForm } = useFormValidator();
 
   const [isProcessing, setIsProcessing] = useState(false);
   const [isChange, setIsChange] = useState(false);
@@ -47,10 +47,15 @@ const Profile = ({ onLogout, onError }) => {
     }
   };
   
-  let isButtonActive = false;
-  if (isCorrect && !isProcessing && (values.username !== initValues.username || values.email !== initValues.email)) {
-  isButtonActive = true;
-  };
+  const isButtonActive = isCorrect
+  && !isProcessing
+  &&  (values.username !== initValues.username || values.email !== initValues.email);
+
+
+  // let isButtonActive = false;
+  // if (isCorrect && !isProcessing && (values.username !== initValues.username || values.email !== initValues.email)) {
+  // isButtonActive = true;
+  // };
 
   return (
     <section className="profile">

@@ -6,8 +6,7 @@ import { VALIDATOR } from "../../utils/constants";
 import Preloader from "../Movies/Preloader/Preloader";
 
 const Profile = ({ onLogout, onError }) => {
-  const userContext = useContext(CurrentUserContext);
-  const [currentUser, setCurrentUser] = useState(userContext.currentUser);
+  const { currentUser, setCurrentUser } = useContext(CurrentUserContext);
   const initValues = {
     name: currentUser.name,
     email: currentUser.email,
@@ -49,7 +48,7 @@ const Profile = ({ onLogout, onError }) => {
   };
 
   let isButtonActive = false;
-  if (isCorrect && !isProcessing && (values.name !== initValues.name || values.email !== initValues.email)) {
+  if (isCorrect && !isProcessing && (values.username !== initValues.username || values.email !== initValues.email)) {
   isButtonActive = true;
   };
 
@@ -100,7 +99,7 @@ const Profile = ({ onLogout, onError }) => {
           <button
             type="submit"
             className="profile__submit-btn"
-            disabled={!isButtonActive}
+            disabled={isButtonActive}
           >
             Сохранить
           </button>

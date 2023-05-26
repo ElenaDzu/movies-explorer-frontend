@@ -28,12 +28,18 @@ const Profile = ({ onLogout, onError }) => {
       name: values.name,
       email: values.email,
     });
-
+    console.log(setCurrentUser);
+    console.log(values.name);
+    console.log(values.email);
     try {
       const data = await changeUserInfo({
         name: values.name,
         email: values.email,
-      });
+      },
+      console.log(changeUserInfo),
+      console.log(values.name),
+      console.log(values.email)
+      );
 
       setIsChange(false);
       onError("Данные успешно изменены");
@@ -51,8 +57,7 @@ const Profile = ({ onLogout, onError }) => {
   if (
     isCorrect &&
     !isProcessing &&
-    (values.name !== initValues.name ||
-      values.email !== initValues.email)
+    (values.name !== initValues.name || values.email !== initValues.email)
   ) {
     isButtonActive = true;
   }

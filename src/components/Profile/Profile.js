@@ -8,7 +8,7 @@ import Preloader from "../Movies/Preloader/Preloader";
 const Profile = ({ onLogout, onError }) => {
   const { currentUser, setCurrentUser } = useContext(CurrentUserContext);
   const initValues = {
-    username: currentUser.name,
+    name: currentUser.name,
     email: currentUser.email,
   };
   const { values, isCorrect, handleChange, resetForm } = useFormValidator();
@@ -25,20 +25,20 @@ const Profile = ({ onLogout, onError }) => {
     evt.preventDefault();
     setIsProcessing(true);
     setCurrentUser({
-      name: values.username,
+      name: values.name,
       email: values.email,
     });
 
     try {
       const data = await changeUserInfo({
-        name: values.username,
+        name: values.name,
         email: values.email,
       });
 
       setIsChange(false);
       onError("Данные успешно изменены");
       resetForm({
-        username: data.name,
+        name: data.name,
         email: data.email,
       });
     } catch (error) {
@@ -48,7 +48,7 @@ const Profile = ({ onLogout, onError }) => {
   };
 
   let isButtonActive = false;
-  if (isCorrect && !isProcessing && (values.username !== initValues.username || values.email !== initValues.email)) {
+  if (isCorrect && !isProcessing && (values.name !== initValues.name || values.email !== initValues.email)) {
   isButtonActive = true;
   };
 
@@ -67,12 +67,12 @@ const Profile = ({ onLogout, onError }) => {
           <input
             className="profile__text profile__text_small"
             type="text"
-            name="username"
+            name="name"
             id="name"
             minLength="2"
             maxLength="30"
-            pattern={VALIDATOR.username.regex}
-            value={values.username || currentUser.name}
+            pattern={VALIDATOR.name.regex}
+            value={values.name || ""}
             onChange={handleChange}
             disabled={isProcessing || !isChange}
           />
@@ -89,7 +89,7 @@ const Profile = ({ onLogout, onError }) => {
             minLength="2"
             maxLength="30"
             pattern={VALIDATOR.email.regex}
-            value={values.email || currentUser.email}
+            value={values.email || ""}
             onChange={handleChange}
             disabled={isProcessing || !isChange}
           />

@@ -23,7 +23,7 @@
 }
 
 .profile__line:not(:first-of-type) {
-  border-top: 1px solid var(--grey-dark);
+  border-top: 1px solid #E8E8E8;
 }
 
 .profile__block {
@@ -99,8 +99,8 @@
   font-size: 12px;
   line-height: 15px;
   text-align: center;
-  color: var(--white);
-  background: var(--secondary);
+  color: black;
+  background: #2BE080;
   border: none;
   border-radius: 3px;
   transition: opacity .3s linear;
@@ -112,8 +112,8 @@
 }
 
 .profile__submit-btn:disabled {
-  color: var(--grey-light-text);
-  background: var(--grey-dark);
+  color: #C2C2C2;
+  background: #E8E8E8;
   cursor: auto;
 }
 
@@ -127,7 +127,7 @@
   font-size: 11px;
   line-height: 13px;
   text-align: center;
-  color: var(--accent);
+  color: #FF3055;
   opacity: 1;
 }
 

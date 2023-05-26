@@ -51,12 +51,12 @@ const Profile = ({ onLogout, onError }) => {
   if (
     isCorrect &&
     !isProcessing &&
-    (values.username !== initValues.username ||
+    (values.name !== initValues.name ||
       values.email !== initValues.email)
   ) {
     isButtonActive = true;
   }
-  console.log(initValues.username);
+  console.log(initValues.name);
   return (
     <section className="profile">
       <h1 className="profile__title">{`Привет, ${currentUser.name}!`}</h1>

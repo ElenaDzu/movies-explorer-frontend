@@ -116,7 +116,7 @@
   line-height: auto;
 }
 
-.page__text-reg:focus {
+.page__text-reg:active {
   border-color: #a0a0a0;
   border: none;
 }

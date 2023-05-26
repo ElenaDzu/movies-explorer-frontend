@@ -58,8 +58,13 @@ const Profile = ({ onLogout, onError }) => {
     isCorrect &&
     !isProcessing &&
     (values.name !== initValues.name && values.email !== initValues.email)
-  ) {
+  ) 
+  {
     isButtonActive = true;
+  }
+  else 
+  {
+    isButtonActive = false;
   }
   console.log(values.name);
   console.log(initValues.name);

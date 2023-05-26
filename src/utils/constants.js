@@ -11,7 +11,7 @@ export const StatusError = {
 }
 
 export const VALIDATOR = {
-  username: {
+  name: {
     regex: "^[\\sa-zA-Zа-яА-ЯёЁ-]+$",
     message: "Имя может состоять из латиницы, кириллицы, пробела, дефиса",
   },

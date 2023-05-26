@@ -26,6 +26,7 @@ function App() {
   const [loggedIn, setLoggedIn] = useState(!!localStorage.getItem("jwt"));
   const [isProcessing, setIsProcessing] = useState(false);
   const [messagePopup, setMessagePopup] = useState("");
+  const [movies, setMovies] = useState([]);
 
   const onError = (msg) => {
     setMessagePopup(msg);
@@ -45,11 +46,17 @@ function App() {
 
   const navigate = useNavigate();
 
-  let [movies, setMovies] = useState([]);
   useEffect(() => {
+    if (localStorage.getItem('storageAllFilms')) {
+      setMovies(JSON.parse(localStorage.getItem('storageAllFilms')));
+      if (movies) {
+        return;
+      }
+    };
     getMovies()
       .then((res) => {
         setMovies(res);
+        localStorage.setItem('storageAllFilms', JSON.stringify(res));
       })
       .catch((err) => {
         if (err.status === 404) {

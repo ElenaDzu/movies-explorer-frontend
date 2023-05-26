@@ -9,6 +9,7 @@ export function useFormValidator() {
     const target = event.target;
     const name = target.name;
     const value = target.value;
+    console.log(target.name, target.value);
     
     setValues({...values, [name]: value});
     setErrors({...errors, [name]: target.validationMessage });

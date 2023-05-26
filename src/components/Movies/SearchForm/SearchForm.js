@@ -7,6 +7,8 @@ function SearchForm({ handleClickCheckbox, handleClickSearch }) {
     localStorage.getItem("storageKeyWord") ?? ""
   );
 
+  const [isBlocked, setIsBlocked] = useState(false);
+
   const [error, setError] = useState("");
 
   const [isShort, setIsShort] = useState(
@@ -14,13 +16,19 @@ function SearchForm({ handleClickCheckbox, handleClickSearch }) {
   );
 
   const onChange = (e) => {
-    if (!e.target.value) {
+    if (!query) {
       setError(SearchError.KEY_WORD);
       return;
     }
     setError("");
-    setQuery(e.target.value);
-    handleClickSearch(e.target.value);
+    if (e.type !== 'click'){
+      setQuery(e.target.value);
+    }
+    if (e.code === 'Enter' || e.type === 'click') {
+      setIsBlocked(true);
+      handleClickSearch(query);
+      setIsBlocked(false);
+    }
   };
 
   const onCheckbox = (e) => {
@@ -37,14 +45,17 @@ function SearchForm({ handleClickCheckbox, handleClickSearch }) {
             className="searchform__input"
             name="name"
             defaultValue={query}
-            onChange={onChange}
+            onKeyUp={onChange}
             type="text"
+            disabled={isBlocked}
             placeholder="Фильм"
           />
           <img
             className="searchform__image"
             alt="Иконка поисковика"
+            onClick={onChange}
             src={FindPath}
+            disabled={isBlocked}
           ></img>
         </div>
         <div className="filtercheckbox">

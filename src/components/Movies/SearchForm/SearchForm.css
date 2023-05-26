@@ -85,6 +85,7 @@
 }
 
 .searchform__input:focus {
+  border: none;
   border-color: #a0a0a0;
 }
 

@@ -71,7 +71,7 @@ const Profile = ({ onLogout, onError }) => {
             id="name"
             minLength="2"
             maxLength="30"
-            pattern={VALIDATOR.username.pattern}
+            pattern={VALIDATOR.username.regex}
             value={values.username || currentUser.name}
             onChange={handleChange}
             disabled={isProcessing || !isChange}
@@ -88,7 +88,7 @@ const Profile = ({ onLogout, onError }) => {
             id="email"
             minLength="2"
             maxLength="30"
-            pattern={VALIDATOR.email.pattern}
+            pattern={VALIDATOR.email.regex}
             value={values.email || currentUser.email}
             onChange={handleChange}
             disabled={isProcessing || !isChange}

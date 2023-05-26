@@ -17,7 +17,7 @@
   background-color: #fdfdfd;
 }
 
-@media (max-width: 1279px) and (min-width: 768px) {
+@media (max-width: 769px) and (min-width: 768px) {
   .moviescardlist__list {
     width: 93%;
     padding-top: 1.52%;

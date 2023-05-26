@@ -114,6 +114,11 @@
   position: absolute;
 }
 
+.searchform__image:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
 .filtercheckbox {
   display: flex;
   margin: auto 0 auto 40px;

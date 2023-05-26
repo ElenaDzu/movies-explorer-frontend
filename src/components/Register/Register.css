@@ -117,8 +117,8 @@
 }
 
 .page__text-reg:active {
-  border-color: #a0a0a0;
-  border: none;
+  outline: 0;
+  outline-offset: 0;
 }
 
 .page__input-errorreg {

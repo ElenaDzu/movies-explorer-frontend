@@ -118,7 +118,6 @@
 }
 
 .page__text:focus {
-  border-color: #a0a0a0;
   border: none;
 }
 

@@ -8,7 +8,7 @@ import Preloader from "../Movies/Preloader/Preloader";
 const Profile = ({ onLogout, onError }) => {
   const { currentUser, setCurrentUser } = useContext(CurrentUserContext);
   const initValues = {
-    name: currentUser.name,
+    username: currentUser.name,
     email: currentUser.email,
   };
   const { values, isCorrect, handleChange, resetForm } = useFormValidator();
@@ -25,20 +25,20 @@ const Profile = ({ onLogout, onError }) => {
     evt.preventDefault();
     setIsProcessing(true);
     setCurrentUser({
-      name: values.name,
+      name: values.username,
       email: values.email,
     });
 
     try {
       const data = await changeUserInfo({
-        name: values.name,
+        name: values.username,
         email: values.email,
       });
 
       setIsChange(false);
       onError("Данные успешно изменены");
       resetForm({
-        name: data.name,
+        username: data.name,
         email: data.email,
       });
     } catch (error) {
@@ -46,16 +46,11 @@ const Profile = ({ onLogout, onError }) => {
       setIsProcessing(false);
     }
   };
-  
-  const isButtonActive = isCorrect
-  && !isProcessing
-  &&  (values.username !== initValues.username || values.email !== initValues.email);
 
-
-  // let isButtonActive = false;
-  // if (isCorrect && !isProcessing && (values.username !== initValues.username || values.email !== initValues.email)) {
-  // isButtonActive = true;
-  // };
+  let isButtonActive = false;
+  if (isCorrect && !isProcessing && (values.username !== initValues.username || values.email !== initValues.email)) {
+  isButtonActive = true;
+  };
 
   return (
     <section className="profile">
@@ -72,12 +67,12 @@ const Profile = ({ onLogout, onError }) => {
           <input
             className="profile__text profile__text_small"
             type="text"
-            name="name"
+            name="username"
             id="name"
             minLength="2"
             maxLength="30"
-            pattern={VALIDATOR.name.regex}
-            value={values.name || currentUser.name}
+            pattern={VALIDATOR.username.regex}
+            value={values.username || currentUser.name}
             onChange={handleChange}
             disabled={isProcessing || !isChange}
           />

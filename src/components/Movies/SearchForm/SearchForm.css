@@ -185,6 +185,11 @@
   background-image: url("../../../images/tumbgreen.svg");
 }
 
+.filtercheckbox__btn + .filtercheckbox__switch::before:hover {
+ cursor: pointer;
+ opacity: 0.5;
+}
+
 .filtercheckbox__btn:checked + .filtercheckbox__switch::before {
   background-image: url("../../../images/tumbgreen.svg");
   background-position: 10%;

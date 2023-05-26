@@ -85,7 +85,7 @@
 }
 
 .searchform__input:focus {
-  border: #7e7c7c solid 3px;
+  border: #a0a0a0 solid 3px;
 }
 
 @media (max-width: 1279px) and (min-width: 768px) {

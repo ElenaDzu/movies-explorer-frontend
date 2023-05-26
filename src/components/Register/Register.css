@@ -116,6 +116,10 @@
   line-height: auto;
 }
 
+.page__text-reg:focus {
+  border: #a0a0a0 solid 3px;
+}
+
 .page__input-errorreg {
   display: flex;
   margin-left: 0;

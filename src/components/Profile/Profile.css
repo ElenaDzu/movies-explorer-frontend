@@ -48,7 +48,7 @@
 }
 
 .profile__text:focus {
-  border: #7e7c7c solid 3px;
+  border: #a0a0a0 solid 3px;
 }
 
 .profile__text_small {

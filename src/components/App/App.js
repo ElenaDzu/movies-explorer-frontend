@@ -125,7 +125,7 @@ function App() {
 
   return (
     <CurrentUserContext.Provider
-      value={{ currentUser, setCurrentUser, savedMovies, setSavedMovies }}
+      value={{ currentUser, setCurrentUser }}
     >
       <div className="app">
         <Routes>

@@ -8,7 +8,6 @@ export function useFormValidator() {
   const handleChange = (event) => {
     const target = event.target;
     const name = target.name;
-    
     const value = target.value;
 
     

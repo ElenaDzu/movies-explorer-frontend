@@ -117,8 +117,14 @@
 }
 
 .page__text-reg:focus {
-  outline: solid 1px #afacac;
+  outline: solid 1px #c1bdbd;
   outline-offset: 0;
+}
+
+.page__text-reg:disabled {
+  color: #c1bdbd;
+  background-color: #a0a0a0;
+  opacity: 0.5;
 }
 
 .page__input-errorreg {

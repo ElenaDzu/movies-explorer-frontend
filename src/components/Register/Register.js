@@ -60,6 +60,7 @@ const Register = ({ onRegister, isProcessing }) => {
           onChange={handleChange}
           value={values.email || ""}
           pattern={VALIDATOR.email.regex}
+          disabled={isProcessing}
         />
         <span className="page__input-errorreg" id="email-errorreg">
           {errors.email}

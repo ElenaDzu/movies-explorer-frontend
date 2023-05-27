@@ -3,7 +3,7 @@ import MoviesCardList from "../Movies/MoviesCardList/MoviesCardList";
 import SearchForm from "../Movies/SearchForm/SearchForm";
 import CurrentUserContext from "../../contexts/CurrentUserContext";
 import { SearchError, filterFilms } from "../../utils/constants";
-import Preloader from "./Preloader/Preloader";
+import Preloader from "../Movies/Preloader/Preloader";
 
 const SavedMovies = ({ onError }) => {
   const { savedMovies } = useContext(CurrentUserContext);

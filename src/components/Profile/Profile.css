@@ -52,6 +52,12 @@
   outline-offset: 0;
 }
 
+.profile__text:disabled {
+  color: #c1bdbd;
+  background-color: #a0a0a0;
+  opacity: 0.5;
+}
+
 .profile__text_small {
   max-width: 85%;
   flex-grow: 1;

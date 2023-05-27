@@ -57,7 +57,12 @@ const Profile = ({ onLogout, onError }) => {
   if (
     isCorrect &&
     !isProcessing &&
-    (values.name !== initValues.name && values.email !== initValues.email)
+    (
+      values.name !== initValues.name 
+      && values.email !== initValues.email
+      && typeof(values.name) !== "undefined"
+      && typeof(values.email) !== "undefined"
+    )
   ) 
   {
     isButtonActive = true;
@@ -68,7 +73,6 @@ const Profile = ({ onLogout, onError }) => {
   }
   console.log(values.name);
   console.log(initValues.name);
-
   console.log(values.email);
   console.log(initValues.email);
 

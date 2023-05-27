@@ -199,11 +199,6 @@
   margin-bottom: 70px;
 }
 
-.page__block:first-child:hover {
-  opacity: 0.3;
-  cursor: pointer;
-}
-
 .page__link {
   display: flex;
   margin-left: 8px;

@@ -5,14 +5,16 @@ import { VALIDATOR, StatusError } from "../../utils/constants";
 import logoPath from "../../images/header-logom.svg";
 import Preloader from "../Movies/Preloader/Preloader";
 
-const Register = ({ onRegister, isProcessing }) => {
+const Register = ({ onRegister }) => {
   const { handleChange, values, errors, isCorrect } = useFormValidator();
 
   const [errorbtn, setErrorbtn] = useState("");
+  const [isProcessing, setIsProcessing] = useState(false);
 
   const handleSubmit = (evt) => {
     setErrorbtn("");
     evt.preventDefault();
+    setIsProcessing(true);
     onRegister(values)
     .catch(() => {
         setErrorbtn(StatusError.BAD_REQUEST);

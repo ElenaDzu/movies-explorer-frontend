@@ -3,10 +3,12 @@ import { VALIDATOR } from "../../utils/constants";
 import logoPath from "../../images/header-logom.svg";
 import Preloader from "../Movies/Preloader/Preloader";
 
-const Login = ({ isProcessing, onLogin }) => {
+const Login = ({ onLogin }) => {
   const { values, errors, isCorrect, handleChange } = useFormValidator();
+  const [isProcessing, setIsProcessing] = useState(false);
   const handleSubmit = (evt) => {
     evt.preventDefault();
+    setIsProcessing(true);
     onLogin(values);
   };
 

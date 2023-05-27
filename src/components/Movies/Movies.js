@@ -70,6 +70,7 @@ function Movies() {
   const handleClickSearch = (keyWord) => {
     if (keyWord === "") return;
     setKeyWord(keyWord);
+    setIsProcessing(true);
     localStorage.setItem("storageKeyWord", keyWord);
     getFilteredFilms(keyWord, isShortFilms);
   };

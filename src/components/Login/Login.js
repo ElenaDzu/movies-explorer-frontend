@@ -1,6 +1,7 @@
 import useFormValidator from "../../hooks/useFormValidator";
 import { VALIDATOR } from "../../utils/constants";
 import logoPath from "../../images/header-logom.svg";
+import Preloader from "../Movies/Preloader/Preloader";
 
 const Login = ({ isProcessing, onLogin }) => {
   const { values, errors, isCorrect, handleChange } = useFormValidator();
@@ -52,7 +53,8 @@ const Login = ({ isProcessing, onLogin }) => {
           disabled={isProcessing}
         />
         <span className="page__input-error" id="password-error">{errors.password}</span>
-        <button type="submit" className="page__btn" disabled={!isCorrect}>
+        {isProcessing ? <Preloader /> : ""}
+        <button type="submit" className="page__btn" disabled={!isCorrect || isProcessing}>
           Войти
         </button>
         <div className="page__block">

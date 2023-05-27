@@ -121,12 +121,6 @@
   outline-offset: 0;
 }
 
-.page__text-reg:disabled {
-  color: #c1bdbd;
-  background-color: #a0a0a0;
-  opacity: 0.5;
-}
-
 .page__input-errorreg {
   display: flex;
   margin-left: 0;

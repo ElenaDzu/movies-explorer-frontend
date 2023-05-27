@@ -3,10 +3,12 @@ import MoviesCardList from "../Movies/MoviesCardList/MoviesCardList";
 import SearchForm from "../Movies/SearchForm/SearchForm";
 import CurrentUserContext from "../../contexts/CurrentUserContext";
 import { SearchError, filterFilms } from "../../utils/constants";
+import Preloader from "./Preloader/Preloader";
 
 const SavedMovies = ({ onError }) => {
   const { savedMovies } = useContext(CurrentUserContext);
   const [movies, setMovies] = useState([]);
+  const [isProcessing, setIsProcessing] = useState(false);
   const [searchFeatures, setSearchFeatures] = useState({
     keyWord: "",
     isShort: false,
@@ -39,11 +41,13 @@ const SavedMovies = ({ onError }) => {
 
   const handleClickSearch = (word) => {
     setSearchFeatures({ ...searchFeatures, keyWord: word });
+    setIsProcessing(true);
     getFilteredFilms(word, searchFeatures.isShort);
   };
 
   const handleClickCheckbox = (isChecked) => {
     setSearchFeatures({ ...searchFeatures, isShort: isChecked });
+    setIsProcessing(true);
     getFilteredFilms(searchFeatures.keyWord, isChecked);
   };
 
@@ -61,7 +65,7 @@ const SavedMovies = ({ onError }) => {
         handleClickSearch={handleClickSearch}
         handleClickCheckbox={handleClickCheckbox}
       />
-      {renderFilmsArray()}
+      {isProcessing ? <Preloader /> : renderFilmsArray()}
     </div>
   );
 };

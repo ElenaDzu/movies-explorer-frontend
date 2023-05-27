@@ -28,18 +28,12 @@ const Profile = ({ onLogout, onError }) => {
       name: values.name,
       email: values.email,
     });
-    console.log(setCurrentUser);
-    console.log(values.name);
-    console.log(values.email);
+  
     try {
       const data = await changeUserInfo({
         name: values.name,
         email: values.email,
-      },
-      console.log(changeUserInfo),
-      console.log(values.name),
-      console.log(values.email)
-      );
+      });
 
       setIsChange(false);
       onError("Данные успешно изменены");
@@ -57,24 +51,15 @@ const Profile = ({ onLogout, onError }) => {
   if (
     isCorrect &&
     !isProcessing &&
-    (
-      values.name !== initValues.name 
-      && values.email !== initValues.email
-      && typeof(values.name) !== "undefined"
-      && typeof(values.email) !== "undefined"
-    )
-  ) 
-  {
+    values.name !== initValues.name &&
+    values.email !== initValues.email &&
+    typeof values.name !== "undefined" &&
+    typeof values.email !== "undefined"
+  ) {
     isButtonActive = true;
-  }
-  else 
-  {
+  } else {
     isButtonActive = false;
   }
-  console.log(values.name);
-  console.log(initValues.name);
-  console.log(values.email);
-  console.log(initValues.email);
 
   return (
     <section className="profile">

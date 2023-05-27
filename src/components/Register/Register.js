@@ -3,18 +3,15 @@ import { useState } from "react";
 import useFormValidator from "../../hooks/useFormValidator";
 import { VALIDATOR, StatusError } from "../../utils/constants";
 import logoPath from "../../images/header-logom.svg";
-import Preloader from "../Movies/Preloader/Preloader";
 
-const Register = ({ onRegister }) => {
+const Register = ({ onRegister, isProcessing }) => {
   const { handleChange, values, errors, isCorrect } = useFormValidator();
 
   const [errorbtn, setErrorbtn] = useState("");
-  const [isProcessing, setIsProcessing] = useState(false);
 
   const handleSubmit = (evt) => {
     setErrorbtn("");
     evt.preventDefault();
-    setIsProcessing(true);
     onRegister(values)
     .catch(() => {
         setErrorbtn(StatusError.BAD_REQUEST);
@@ -88,7 +85,6 @@ const Register = ({ onRegister }) => {
           {errors.password}
         </span>
         <p className="page__btn-errorreg">{errorbtn}</p>
-        {isProcessing ? <Preloader /> : ""}
         <button type="submit" className="page__btn-reg" disabled={!isCorrect || isProcessing}>
           Зарегистрироваться
         </button>

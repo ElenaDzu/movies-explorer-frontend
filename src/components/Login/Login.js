@@ -57,7 +57,7 @@ const Login = ({ onLogin, isProcessing }) => {
         </button>
         <div className="page__block">
           <p className="page__block">Еще не зарегистрированы?</p>
-          <a className="page__link" disabled={isProcessing} href="/sign-up">
+          <a className="page__link" href="/sign-up">
             Регистрация
           </a>
         </div>

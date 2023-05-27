@@ -90,7 +90,7 @@ const Register = ({ onRegister, isProcessing }) => {
         </button>
         <div className="page__block">
           <p className="page__block">Уже зарегистрированы?</p>
-          <a className="page__link" disabled={isProcessing} href="/sign-in">
+          <a className="page__link" href="/sign-in">
             Войти
           </a>
         </div>

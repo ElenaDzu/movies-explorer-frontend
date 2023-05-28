@@ -79,6 +79,7 @@ const SavedMovies = ({ onError }) => {
         keyword='savedMovies'
         handleClickSearch={handleClickSearch}
         handleClickCheckbox={handleClickCheckbox}
+        isProcessing={isProcessing}
       />
       {isProcessing ? <Preloader /> : renderFilmsArray()}
     </div>

@@ -2,7 +2,11 @@ import { useState, useEffect } from "react";
 import MoviesCardList from "./MoviesCardList/MoviesCardList";
 import SearchForm from "./SearchForm/SearchForm";
 import { getMovies } from "../../utils/MoviesApi";
-import { SearchError, standardizeFilms, filterFilms } from "../../utils/constants";
+import {
+  SearchError,
+  standardizeFilms,
+  filterFilms,
+} from "../../utils/constants";
 import Preloader from "./Preloader/Preloader";
 
 function Movies(onError) {
@@ -12,23 +16,27 @@ function Movies(onError) {
   const [keyWord, setKeyWord] = useState("");
   const [isShortFilms, setIsShortFilms] = useState(false);
 
-  const storageAllFilms = standardizeFilms(JSON.parse(localStorage.getItem("storageAllFilms")) || []);
+  const storageAllFilms = standardizeFilms(
+    JSON.parse(localStorage.getItem("storageAllFilms")) || []
+  );
 
   useEffect(() => {
-    const storageSearchedResult = JSON.parse(localStorage.getItem("storageSearchedResult")) || [];
+    const storageSearchedResult =
+      JSON.parse(localStorage.getItem("storageSearchedResult")) || [];
     const storageKeyWord = localStorage.getItem("storageKeyWord") || "";
-    const storageIsShort = JSON.parse(localStorage.getItem("storageIsShort")) || false;
-    
+    const storageIsShort =
+      JSON.parse(localStorage.getItem("storageIsShort")) || false;
+
     if (storageSearchedResult) {
-    setSearchedFilms(storageSearchedResult);
+      setSearchedFilms(storageSearchedResult);
     }
     if (storageKeyWord) {
-    setKeyWord(storageKeyWord);
+      setKeyWord(storageKeyWord);
     }
     if (storageIsShort) {
-    setIsShortFilms(storageIsShort);
+      setIsShortFilms(storageIsShort);
     }
-    }, []);
+  }, []);
 
   const getFilteredFilms = (keyWord, isShortFilms) => {
     if (!storageAllFilms.length) {
@@ -96,6 +104,7 @@ function Movies(onError) {
         keyword="movies"
         handleClickSearch={handleClickSearch}
         handleClickCheckbox={handleClickCheckbox}
+        isProcessing={isProcessing}
       />
       {isProcessing ? <Preloader /> : renderFilmsArray()}
     </main>

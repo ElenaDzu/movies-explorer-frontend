@@ -2,9 +2,9 @@ import { React, useState } from "react";
 import FindPath from "../../../images/find.svg";
 import { SearchError } from "../../../utils/constants";
 
-function SearchForm({ handleClickCheckbox, handleClickSearch }) {
+function SearchForm({ keyword, handleClickCheckbox, handleClickSearch }) {
   const [query, setQuery] = useState(
-    localStorage.getItem("storageKeyWord") ?? ""
+    localStorage.getItem(`${keyword}_storageKeyWord`) ?? ""
   );
 
   const [isBlocked, setIsBlocked] = useState(false);
@@ -16,15 +16,15 @@ function SearchForm({ handleClickCheckbox, handleClickSearch }) {
   );
 
   const onChange = (e) => {
-    if (!query) {
-      setError(SearchError.KEY_WORD);
-      return;
-    }
-    setError("");
     if (e.type !== 'click'){
       setQuery(e.target.value);
     }
     if (e.code === 'Enter' || e.type === 'click') {
+      if (!query) {
+        setError(SearchError.KEY_WORD);
+        return;
+      }
+      setError("");
       setIsBlocked(true);
       handleClickSearch(query);
       setIsBlocked(false);

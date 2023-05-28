@@ -1,11 +1,22 @@
-import { React, useState, useEffect, useContext } from "react";
+import { React, useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import CurrentUserContext from "../../../contexts/CurrentUserContext";
 import MoviesCard from "../MoviesCard/MoviesCard";
 import { NUMBERCARDS, TYPESCREEN } from "../../../utils/constants";
+import { getUserMovies } from "../../../utils/MainApi";
 
-function MoviesCardList({ movies, onError }) {
-  const { savedMovies } = useContext(CurrentUserContext);
+function MoviesCardList({ movies, sMovies, onError }) {
+  const [ savedMovies, setSavedMovies ] = useState([]);
+  useEffect(() => {
+    getUserMovies()
+    .then(json => {
+      setSavedMovies(json);
+    })
+    .catch((err) => {
+      setSavedMovies([]);
+      console.log(onError)
+      // onError();
+    })
+  }, []);
   const [isMoreBtn, setIsMoreBtn] = useState(false);
   const { pathname } = useLocation();
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -64,6 +75,7 @@ function MoviesCardList({ movies, onError }) {
             key={card.movieId}
             card={card}
             onError={onError}
+            setSavedMovies={sMovies || setSavedMovies}
             saved={checkIsSaved(card)}
           />
         ))}

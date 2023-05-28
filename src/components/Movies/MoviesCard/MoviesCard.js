@@ -1,11 +1,10 @@
-import { React, useContext } from "react";
+import { React, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { saveMovie, deleteMovie, getUserMovies } from "../../../utils/MainApi";
 import cn from "classnames";
 import CurrentUserContext from "../../../contexts/CurrentUserContext";
 
-function MoviesCard({ card, saved, onError }) {
-  const { setSavedMovies } = useContext(CurrentUserContext);
+function MoviesCard({ card, setSavedMovies, rerender, saved, onError }) {
   const hours = Math.floor(card.duration / 60);
   const minutes = card.duration % 60;
 
@@ -20,7 +19,7 @@ function MoviesCard({ card, saved, onError }) {
     if (saved.isSaved) {
       deleteMovie(saved.id)
         .then(() => {
-            getUserMovies().then((data) => setSavedMovies(data));
+            getUserMovies().then((data) => {setSavedMovies(data);});
         })
         .catch(() => {
           onError("«Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё».");
@@ -38,7 +37,7 @@ function MoviesCard({ card, saved, onError }) {
       <img
         className="moviescard__image"
         src={card.thumbnail}
-        alt="Постер к фильму"
+        alt={`Постер к фильму ${card.nameRU}`}
       />
       </a>
       <div className="moviescard__block">

@@ -5,15 +5,14 @@ import { getMovies } from "../../utils/MoviesApi";
 import { SearchError, standardizeFilms, filterFilms } from "../../utils/constants";
 import Preloader from "./Preloader/Preloader";
 
-function Movies() {
+function Movies(onError) {
   const [searchedFilms, setSearchedFilms] = useState([]);
   const [isProcessing, setIsProcessing] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [keyWord, setKeyWord] = useState("");
   const [isShortFilms, setIsShortFilms] = useState(false);
 
-  const storageAllFilms =
-    JSON.parse(localStorage.getItem("storageAllFilms")) || [];
+  const storageAllFilms = standardizeFilms(JSON.parse(localStorage.getItem("storageAllFilms")) || []);
 
   useEffect(() => {
     const storageSearchedResult = JSON.parse(localStorage.getItem("storageSearchedResult")) || [];
@@ -70,8 +69,7 @@ function Movies() {
   const handleClickSearch = (keyWord) => {
     if (keyWord === "") return;
     setKeyWord(keyWord);
-    setIsProcessing(true);
-    localStorage.setItem("storageKeyWord", keyWord);
+    localStorage.setItem("movies_storageKeyWord", keyWord);
     getFilteredFilms(keyWord, isShortFilms);
   };
 
@@ -89,12 +87,13 @@ function Movies() {
         <p className="movies__search-message">{SearchError.SEARCH_ERROR}</p>
       );
     }
-    return <MoviesCardList movies={searchedFilms} />;
+    return <MoviesCardList onError={onError} movies={searchedFilms} />;
   };
 
   return (
     <main>
       <SearchForm
+        keyword="movies"
         handleClickSearch={handleClickSearch}
         handleClickCheckbox={handleClickCheckbox}
       />

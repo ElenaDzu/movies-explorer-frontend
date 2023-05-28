@@ -1,5 +1,4 @@
 export const BASE_URL = "https://api.elenadziuba.nomoredomains.work";
-//export const BASE_URL = "http://127.0.0.1:3001";
 
 const headers = {
   Accept: "application/json",

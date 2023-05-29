@@ -60,9 +60,7 @@ const SavedMovies = ({ onError }) => {
 
   const handleClickCheckbox = (isChecked) => {
     setSearchFeatures({ ...searchFeatures, isShort: isChecked });
-    setIsProcessing(true);
     getFilteredFilms(searchFeatures.keyWord, isChecked);
-    setIsProcessing(false);
   };
 
   const renderFilmsArray = () => {

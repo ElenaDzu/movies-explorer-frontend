@@ -76,8 +76,8 @@ function Movies(onError) {
 
   const handleClickSearch = (keyWord) => {
     if (keyWord === "") return;
-    setKeyWord(keyWord);
     setIsProcessing(true);
+    setKeyWord(keyWord);
     localStorage.setItem("movies_storageKeyWord", keyWord);
     getFilteredFilms(keyWord, isShortFilms);
     setIsProcessing(false);

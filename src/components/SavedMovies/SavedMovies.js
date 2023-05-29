@@ -27,7 +27,6 @@ const SavedMovies = ({ onError }) => {
   const [errorMessage, setErrorMessage] = useState("");
   const getFilteredFilms = (keyWord, isShort) => {
     const filteredFilms = filterFilms(savedMovies, keyWord, isShort);
-    setIsProcessing(true);
     if (filteredFilms.length === 0) {
       setErrorMessage(SearchError.NOT_FOUND);
     } else {
@@ -39,7 +38,6 @@ const SavedMovies = ({ onError }) => {
       setErrorMessage("");
     }
     setMovies(filteredFilms);
-    setIsProcessing(false);
   };
 
   useEffect(() => {
@@ -54,8 +52,10 @@ const SavedMovies = ({ onError }) => {
 
   const handleClickSearch = (word) => {
     setSearchFeatures({ ...searchFeatures, keyWord: word });
+    setIsProcessing(true);
     localStorage.setItem('savedMovies_storageKeyWord', word);
     getFilteredFilms(word, searchFeatures.isShort);
+    setIsProcessing(false);
   };
 
   const handleClickCheckbox = (isChecked) => {

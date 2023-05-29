@@ -1,52 +1,140 @@
-import { React } from "react";
+import { useState, useContext } from "react";
+import { changeUserInfo } from "../../utils/MainApi";
+import CurrentUserContext from "../../contexts/CurrentUserContext";
+import useFormValidator from "../../hooks/useFormValidator";
+import { VALIDATOR } from "../../utils/constants";
+import Preloader from "../Movies/Preloader/Preloader";
 
-function Profile() {
+const Profile = ({ onLogout, onError }) => {
+  const { currentUser, setCurrentUser } = useContext(CurrentUserContext);
+  const initValues = {
+    name: currentUser.name,
+    email: currentUser.email,
+  };
+  const { values, isCorrect, handleChange, resetForm } = useFormValidator();
+
+  const [isProcessing, setIsProcessing] = useState(false);
+  const [isChange, setIsChange] = useState(false);
+
+  async function handleEdit(evt) {
+    evt.preventDefault();
+    await setIsChange(true);
+  }
+
+  const handleSubmit = async (evt) => {
+    evt.preventDefault();
+    setIsProcessing(true);
+    setCurrentUser({
+      name: values.name,
+      email: values.email,
+    });
+  
+    try {
+      const data = await changeUserInfo({
+        name: values.name,
+        email: values.email,
+      });
+
+      setIsChange(false);
+      onError("Данные успешно изменены");
+      resetForm({
+        name: data.name,
+        email: data.email,
+      });
+    } catch (error) {
+    } finally {
+      setIsProcessing(false);
+    }
+  };
+
+  let isButtonActive = false;
+  if (
+    isCorrect &&
+    !isProcessing &&
+    values.name !== initValues.name &&
+    values.email !== initValues.email &&
+    typeof values.name !== "undefined" &&
+    typeof values.email !== "undefined"
+  ) {
+    isButtonActive = true;
+  } else {
+    isButtonActive = false;
+  }
+
   return (
     <section className="profile">
-      <h1 className="profile__title">Привет, Виталий!</h1>
+      <h1 className="profile__title">{`Привет, ${currentUser.name}!`}</h1>
       <form
-        className="profile__form"
-        //onSubmit={handleSubmit}
+        className="profile__block"
+        name={`form-profile`}
+        onSubmit={handleSubmit}
       >
         <div className="profile__line">
-          <label for="input-name" className="profile__label">
+          <label htmlFor="name" className="profile__text">
             Имя
           </label>
           <input
-            id="input-name"
-            required
-            name="name"
-            className="profile__text"
+            className="profile__text profile__text_small"
             type="text"
-            placeholder="Виталий"
-            //onChange={handleChange}
-            //value={loginData.name}
+            name="name"
+            id="name"
+            minLength="2"
+            maxLength="30"
+            pattern={VALIDATOR.name.regex}
+            value={values.name || currentUser.name}
+            onChange={handleChange}
+            disabled={isProcessing || !isChange}
           />
         </div>
         <div className="profile__line">
-          <label for="input-email" className="profile__label">
-            Email
+          <label htmlFor="email" className="profile__text">
+            E-mail
           </label>
           <input
-            id="input-email"
-            required
-            name="email"
-            className="profile__text"
+            className="profile__text profile__text_small"
             type="email"
-            placeholder="turin78952@mail.ru"
-            //onChange={handleChange}
-            //value={loginData.email}
+            name="email"
+            id="email"
+            minLength="2"
+            maxLength="30"
+            pattern={VALIDATOR.email.regex}
+            value={values.email || currentUser.email}
+            onChange={handleChange}
+            disabled={isProcessing || !isChange}
           />
         </div>
+        {isProcessing ? <Preloader /> : ""}
+        {isChange ? (
+          <button
+            type="submit"
+            className="profile__submit-btn"
+            disabled={!isButtonActive}
+          >
+            Сохранить
+          </button>
+        ) : (
+          <button
+            type="button"
+            className="profile__edit-btn"
+            onClick={handleEdit}
+          >
+            Редактировать
+          </button>
+        )}
+        {!isChange ? (
+          <button
+            type="button"
+            className="profile__exit-btn"
+            onClick={onLogout}
+          >
+            Выйти из аккаунта
+          </button>
+        ) : (
+          ""
+        )}
       </form>
-      <button type="submit" className="profile__btn">
-        Peдактировать
-      </button>
-      <button type="submit" className="profile__btn">
-        Выйти из аккаунта
-      </button>
     </section>
   );
-}
+};
 
 export default Profile;

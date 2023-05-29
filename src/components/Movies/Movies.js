@@ -40,7 +40,7 @@ function Movies(onError) {
 
   const getFilteredFilms = (keyWord, isShortFilms) => {
     if (!storageAllFilms.length) {
-      //setIsProcessing(true);
+      setIsProcessing(true);
       getMovies()
         .then((allMovies) => {
           const standardizedFilms = standardizeFilms(allMovies);
@@ -57,7 +57,7 @@ function Movies(onError) {
           handleFilterResult([]);
           setErrorMessage(SearchError.SEARCH_ERROR);
         })
-        //.finally(() => setIsProcessing(false));
+        .finally(() => setIsProcessing(false));
     } else {
       const filteredFilms = keyWord
         ? filterFilms(storageAllFilms, keyWord, isShortFilms)
@@ -78,9 +78,7 @@ function Movies(onError) {
     if (keyWord === "") return;
     setKeyWord(keyWord);
     localStorage.setItem("movies_storageKeyWord", keyWord);
-    setIsProcessing(true);
     getFilteredFilms(keyWord, isShortFilms);
-    setIsProcessing(false);
   };
 
   const handleClickCheckbox = (isChecked) => {
